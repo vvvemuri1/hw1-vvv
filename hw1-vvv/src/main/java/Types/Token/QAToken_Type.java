@@ -1,5 +1,6 @@
 
-/* First created by JCasGen Sun Sep 08 15:09:37 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 15:53:32 EDT 2013 */
+package Types.Token;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,10 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 1-gram in question/answer.
- * Updated by JCasGen Sun Sep 08 15:09:37 EDT 2013
+/** Token in question/answer (delimited by whitespace and punctuation).
+ * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
  * @generated */
-public class Unigram_Type extends Annotation_Type {
+public class QAToken_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -21,31 +22,31 @@ public class Unigram_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Unigram_Type.this.useExistingInstance) {
+  			 if (QAToken_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Unigram_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = QAToken_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Unigram(addr, Unigram_Type.this);
-  			   Unigram_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new QAToken(addr, QAToken_Type.this);
+  			   QAToken_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Unigram(addr, Unigram_Type.this);
+        } else return new QAToken(addr, QAToken_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Unigram.typeIndexID;
+  public final static int typeIndexID = QAToken.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Unigram");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Token.QAToken");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Unigram_Type(JCas jcas, Type casType) {
+  public QAToken_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

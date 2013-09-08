@@ -1,6 +1,7 @@
 
 
-/* First created by JCasGen Sun Sep 08 15:04:50 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
+package Types.TestElement;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 15:09:37 EDT 2013
+ * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class Answer extends Annotation {
@@ -68,14 +69,14 @@ public class Answer extends Annotation {
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_IsCorrect == null)
-      jcasType.jcas.throwFeatMissing("IsCorrect", "Answer");
+      jcasType.jcas.throwFeatMissing("IsCorrect", "Types.TestElement.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_IsCorrect);}
     
   /** setter for IsCorrect - sets Boolean Flag indicating whether or not the proposed answer is correct. 
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_IsCorrect == null)
-      jcasType.jcas.throwFeatMissing("IsCorrect", "Answer");
+      jcasType.jcas.throwFeatMissing("IsCorrect", "Types.TestElement.Answer");
     jcasType.ll_cas.ll_setBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_IsCorrect, v);}    
   }
 

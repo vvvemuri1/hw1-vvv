@@ -7,12 +7,12 @@
     <vendor/>
   <types>
     <typeDescription>
-      <name>Question</name>
+      <name>Types.TestElement.Question</name>
       <description>Question being asked in sample information processing task.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Answer</name>
+      <name>Types.TestElement.Answer</name>
       <description>Proposed answer to question being asked in sample information processing task.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -24,22 +24,22 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>Token</name>
+      <name>Types.Token.QAToken</name>
       <description>Token in question/answer (delimited by whitespace and punctuation).</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Unigram</name>
+      <name>Types.NGram.Unigram</name>
       <description>1-gram in question/answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Bigram</name>
+      <name>Types.NGram.Bigram</name>
       <description>2-gram of consecutive tokens in question/answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Trigram</name>
+      <name>Types.NGram.Trigram</name>
       <description>3-gram of consecutive tokens in question/answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

@@ -1,6 +1,7 @@
 
 
-/* First created by JCasGen Sun Sep 08 15:04:50 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
+package Types.NGram;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -9,16 +10,16 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Sun Sep 08 15:09:37 EDT 2013
+/** 1-gram in question/answer.
+ * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
-public class Token extends Annotation {
+public class Unigram extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Token.class);
+  public final static int typeIndexID = JCasRegistry.register(Unigram.class);
   /** @generated
    * @ordered 
    */
@@ -30,23 +31,23 @@ public class Token extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Token() {/* intentionally empty block */}
+  protected Unigram() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Token(int addr, TOP_Type type) {
+  public Unigram(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Token(JCas jcas) {
+  public Unigram(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Token(JCas jcas, int begin, int end) {
+  public Unigram(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

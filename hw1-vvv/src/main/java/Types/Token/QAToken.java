@@ -1,6 +1,7 @@
 
 
-/* First created by JCasGen Sun Sep 08 15:09:37 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 15:53:32 EDT 2013 */
+package Types.Token;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -9,16 +10,16 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 2-gram of consecutive tokens in question/answer.
- * Updated by JCasGen Sun Sep 08 15:09:37 EDT 2013
+/** Token in question/answer (delimited by whitespace and punctuation).
+ * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
-public class Bigram extends Annotation {
+public class QAToken extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Bigram.class);
+  public final static int typeIndexID = JCasRegistry.register(QAToken.class);
   /** @generated
    * @ordered 
    */
@@ -30,23 +31,23 @@ public class Bigram extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Bigram() {/* intentionally empty block */}
+  protected QAToken() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Bigram(int addr, TOP_Type type) {
+  public QAToken(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Bigram(JCas jcas) {
+  public QAToken(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Bigram(JCas jcas, int begin, int end) {
+  public QAToken(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

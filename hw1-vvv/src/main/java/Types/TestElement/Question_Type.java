@@ -1,5 +1,6 @@
 
-/* First created by JCasGen Sun Sep 08 15:09:37 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
+package Types.TestElement;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,10 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 3-gram of consecutive tokens in question/answer.
- * Updated by JCasGen Sun Sep 08 15:09:37 EDT 2013
+/** Question being asked in sample information processing task.
+ * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
  * @generated */
-public class Trigram_Type extends Annotation_Type {
+public class Question_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -21,31 +22,31 @@ public class Trigram_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Trigram_Type.this.useExistingInstance) {
+  			 if (Question_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Trigram_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Question_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Trigram(addr, Trigram_Type.this);
-  			   Trigram_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Question(addr, Question_Type.this);
+  			   Question_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Trigram(addr, Trigram_Type.this);
+        } else return new Question(addr, Question_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Trigram.typeIndexID;
+  public final static int typeIndexID = Question.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Trigram");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.TestElement.Question");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Trigram_Type(JCas jcas, Type casType) {
+  public Question_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
