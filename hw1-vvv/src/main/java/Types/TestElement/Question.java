@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Sun Sep 08 17:24:28 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/TestElementAnnotator.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated

@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
+ * Updated by JCasGen Sun Sep 08 17:24:28 EDT 2013
  * @generated */
 public class Question_Type extends Annotation_Type {
   /** @generated */

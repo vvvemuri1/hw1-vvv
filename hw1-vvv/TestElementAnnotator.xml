@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>Annotators.TestElementAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>TestElementAnnotator</name>
+    <description>The system will read in the input ﬁle as a UIMA CAS and annotate the question and answer spans. Each answer annotation will also record whether or not the answer is correct.</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <types>
+        <typeDescription>
+          <name>Types.TestElement.Question</name>
+          <description>Question being asked in sample information processing task.</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+          <name>Types.TestElement.Answer</name>
+          <description>Proposed answer to question being asked in sample information processing task.</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>IsCorrect</name>
+              <description>Boolean Flag indicating whether or not the proposed answer is correct.</description>
+              <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+            </featureDescription>
+          </features>
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">Types.TestElement.Question</type>
+          <type>Types.TestElement.Answer</type>
+          <feature>Types.TestElement.Answer:IsCorrect</feature>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
