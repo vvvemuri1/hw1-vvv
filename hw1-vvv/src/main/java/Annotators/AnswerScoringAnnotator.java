@@ -26,10 +26,12 @@ public class AnswerScoringAnnotator extends JCasAnnotator_ImplBase
       if (answer.getIsCorrect())
       {
         answer.setScore(1.0f);
+        answer.setCasProcessorId(AnswerScoringAnnotator.class.getName());
       }
       else
       {
         answer.setScore(0);
+        answer.setCasProcessorId(AnswerScoringAnnotator.class.getName());
       }
     }
   }

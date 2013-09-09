@@ -2,10 +2,10 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>Annotators.NGramAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>Annotators.EvaluationAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>NGramAnnotator</name>
-    <description>The system will annotate 1-,2- and 3-grams of consecutive tokens.</description>
+    <name>EvaluationAnnotator</name>
+    <description>The system will sort the answers according to their scores, and calculate precision at N (where N is the total number of correct answers).</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -13,13 +13,8 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.TestElement.QuestionAnswer</name>
-          <description>SuperType of Question and Answer.</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
           <name>Types.AbstractAnnotation</name>
-          <description>Common core attributes shared by all types.</description>
+          <description/>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
             <featureDescription>
@@ -35,6 +30,11 @@
           </features>
         </typeDescription>
       <typeDescription>
+          <name>Types.TestElement.QuestionAnswer</name>
+          <description>SuperType of Question and Answer.</description>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
           <name>Types.TestElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
           <supertypeName>Types.TestElement.QuestionAnswer</supertypeName>
@@ -44,7 +44,7 @@
               <description>Boolean Flag indicating whether or not the proposed answer is correct.</description>
               <rangeTypeName>uima.cas.Boolean</rangeTypeName>
             </featureDescription>
-          <featureDescription>
+            <featureDescription>
               <name>score</name>
               <description>Answer score (assigned using Gold Answer Scoring System).</description>
               <rangeTypeName>uima.cas.Float</rangeTypeName>
@@ -53,12 +53,11 @@
         </typeDescription>
       </types>
     </typeSystemDescription>
+    <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.QuestionAnswer</type>
-        </inputs>
+        <inputs/>
         <outputs/>
         <languagesSupported/>
       </capability>

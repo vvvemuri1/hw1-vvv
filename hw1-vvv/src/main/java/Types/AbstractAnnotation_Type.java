@@ -13,8 +13,8 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** Common core attributes shared by all types.
- * Updated by JCasGen Mon Sep 09 09:47:02 EDT 2013
+/** 
+ * Updated by JCasGen Mon Sep 09 10:03:55 EDT 2013
  * @generated */
 public class AbstractAnnotation_Type extends Annotation_Type {
   /** @generated */
