@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Common core attributes shared by all types.
- * Updated by JCasGen Mon Sep 09 11:23:35 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/TestElementAndEvaluation.xml
+ * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
  * @generated */
 public class AbstractAnnotation extends Annotation {
   /** @generated

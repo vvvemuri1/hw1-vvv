@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TestElementAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.TestElementAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.TokenAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.NGramAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="AnswerScoringAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.AnswerScoringAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="EvaluationAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.EvaluationAnnotator"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>FullAnalysisEngine</name>
+    <description>Invokes all of the primitive annotators.</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>TestElementAnnotator</node>
+        <node>TokenAnnotator</node>
+        <node>NGramAnnotator</node>
+        <node>AnswerScoringAnnotator</node>
+        <node>EvaluationAnnotator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">Types.TestElement.Question</type>
+          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.NGram</type>
+          <type allAnnotatorFeatures="true">Types.Processed.Evaluation</type>
+          <type allAnnotatorFeatures="true">Types.TestElement.Answer</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

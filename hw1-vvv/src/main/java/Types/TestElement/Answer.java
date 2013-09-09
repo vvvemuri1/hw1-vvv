@@ -8,10 +8,10 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import Types.AbstractAnnotation;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 11:23:35 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/TestElementAndEvaluation.xml
+ * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
  * @generated */
-public class Answer extends QuestionAnswer implements Comparable {
+public class Answer extends QuestionAnswer {
   /** @generated
    * @ordered 
    */
@@ -91,13 +91,6 @@ public class Answer extends QuestionAnswer implements Comparable {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "Types.TestElement.Answer");
     jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}    
-
-  @Override
-  public int compareTo(Object obj) 
-  {
-    Answer answer = (Answer) obj; 
-    return (int)(getScore() - answer.getScore());
-  }
 }
 
 

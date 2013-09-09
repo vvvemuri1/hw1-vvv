@@ -14,8 +14,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 10:23:04 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
  * @generated */
 public class QAToken extends AbstractAnnotation {
   /** @generated
