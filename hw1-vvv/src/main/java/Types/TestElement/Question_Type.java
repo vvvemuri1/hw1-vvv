@@ -9,14 +9,11 @@ import org.apache.uima.cas.impl.FSGenerator;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
-import Types.Token.QAToken_Type;
-
-import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 20:27:03 EDT 2013
+ * Updated by JCasGen Sun Sep 08 20:54:31 EDT 2013
  * @generated */
-public class Question_Type extends QA_Type {
+public class Question_Type extends QuestionAnswer_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}

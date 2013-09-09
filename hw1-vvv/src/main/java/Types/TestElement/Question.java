@@ -7,17 +7,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import Types.Token.QAToken;
-
-
-import org.apache.uima.jcas.tcas.Annotation;
-
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 20:27:03 EDT 2013
+ * Updated by JCasGen Sun Sep 08 20:54:31 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAndToken.xml
  * @generated */
-public class Question extends QA {
+public class Question extends QuestionAnswer {
   /** @generated
    * @ordered 
    */

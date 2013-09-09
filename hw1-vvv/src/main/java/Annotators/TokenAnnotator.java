@@ -2,26 +2,25 @@ package Annotators;
 
 import java.util.Iterator;
 import java.util.StringTokenizer;
-import java.util.regex.Pattern;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import Types.TestElement.QA;
-import Types.Token.QAToken;
+import Types.Processed.QAToken;
+import Types.TestElement.QuestionAnswer;
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase 
 {
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException 
   {
-    FSIndex qaIndex = jcas.getAnnotationIndex(QA.type);
+    FSIndex qaIndex = jcas.getAnnotationIndex(QuestionAnswer.type);
     Iterator qaIter = qaIndex.iterator();
     while(qaIter.hasNext())
     {
-      QA questionAnswer = (QA) qaIter.next();
+      QuestionAnswer questionAnswer = (QuestionAnswer) qaIter.next();
       StringTokenizer st = new StringTokenizer(questionAnswer.getCoveredText()," ?.");
       
       int begin = questionAnswer.getBegin();

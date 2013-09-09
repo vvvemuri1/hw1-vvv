@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Sun Sep 08 19:15:23 EDT 2013 */
+/* First created by JCasGen Sun Sep 08 20:53:03 EDT 2013 */
 package Types.TestElement;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,15 +11,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sun Sep 08 20:27:03 EDT 2013
+ * Updated by JCasGen Sun Sep 08 20:54:31 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAndToken.xml
  * @generated */
-public class QA extends Annotation {
+public class QuestionAnswer extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(QA.class);
+  public final static int typeIndexID = JCasRegistry.register(QuestionAnswer.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +31,23 @@ public class QA extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected QA() {/* intentionally empty block */}
+  protected QuestionAnswer() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public QA(int addr, TOP_Type type) {
+  public QuestionAnswer(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public QA(JCas jcas) {
+  public QuestionAnswer(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public QA(JCas jcas, int begin, int end) {
+  public QuestionAnswer(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

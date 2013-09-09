@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
-package Types.NGram;
+/* First created by JCasGen Sun Sep 08 20:45:45 EDT 2013 */
+package Types.Processed;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,16 +10,16 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 3-gram of consecutive tokens in question/answer.
- * Updated by JCasGen Sun Sep 08 19:15:51 EDT 2013
+/** 1-gram in question/answer.
+ * Updated by JCasGen Sun Sep 08 20:53:02 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
-public class Trigram extends Annotation {
+public class NGram extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Trigram.class);
+  public final static int typeIndexID = JCasRegistry.register(NGram.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +31,23 @@ public class Trigram extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Trigram() {/* intentionally empty block */}
+  protected NGram() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Trigram(int addr, TOP_Type type) {
+  public NGram(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Trigram(JCas jcas) {
+  public NGram(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Trigram(JCas jcas, int begin, int end) {
+  public NGram(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

@@ -9,12 +9,12 @@
     <typeDescription>
       <name>Types.TestElement.Question</name>
       <description>Question being asked in sample information processing task.</description>
-      <supertypeName>Types.TestElement.QA</supertypeName>
+      <supertypeName>Types.TestElement.QuestionAnswer</supertypeName>
     </typeDescription>
     <typeDescription>
       <name>Types.TestElement.Answer</name>
       <description>Proposed answer to question being asked in sample information processing task.</description>
-      <supertypeName>Types.TestElement.QA</supertypeName>
+      <supertypeName>Types.TestElement.QuestionAnswer</supertypeName>
       <features>
         <featureDescription>
           <name>IsCorrect</name>
@@ -24,27 +24,17 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>Types.Token.QAToken</name>
+      <name>Types.Processed.QAToken</name>
       <description>Token in question/answer (delimited by whitespace and punctuation).</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Types.NGram.Unigram</name>
+      <name>Types.Processed.NGram</name>
       <description>1-gram in question/answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>Types.NGram.Bigram</name>
-      <description>2-gram of consecutive tokens in question/answer.</description>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-    <typeDescription>
-      <name>Types.NGram.Trigram</name>
-      <description>3-gram of consecutive tokens in question/answer.</description>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
-    </typeDescription>
-  <typeDescription>
-      <name>Types.TestElement.QA</name>
+      <name>Types.TestElement.QuestionAnswer</name>
       <description>SuperType of Question and Answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>

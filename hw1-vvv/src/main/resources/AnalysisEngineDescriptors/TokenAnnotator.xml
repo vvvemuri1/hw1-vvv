@@ -14,12 +14,12 @@ and answer (break on whitespace and punctuation).</description>
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.Token.QAToken</name>
+          <name>Types.Processed.QAToken</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
       <typeDescription>
-          <name>Types.TestElement.QA</name>
+          <name>Types.TestElement.QuestionAnswer</name>
           <description>SuperType of Question and Answer.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
@@ -29,10 +29,10 @@ and answer (break on whitespace and punctuation).</description>
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.QA</type>
+          <type allAnnotatorFeatures="true">Types.TestElement.QuestionAnswer</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Token.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
         </outputs>
         <languagesSupported/>
       </capability>
