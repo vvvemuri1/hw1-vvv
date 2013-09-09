@@ -29,7 +29,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.Token</type>
         </outputs>
         <languagesSupported/>
       </capability>

@@ -11,7 +11,7 @@ import Types.BaseAnnotation;
 
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 12:49:25 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Sentence extends BaseAnnotation {

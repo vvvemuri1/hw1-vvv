@@ -6,8 +6,8 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 12:49:10 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TestElementAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 13:02:06 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class Answer extends Sentence {
   /** @generated

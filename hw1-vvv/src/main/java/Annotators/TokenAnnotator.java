@@ -8,7 +8,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import Types.Processed.QAToken;
+import Types.Processed.Token;
 import Types.TestElement.Sentence;
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase 
@@ -30,7 +30,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
               
       while (st.hasMoreTokens())
       {
-        QAToken annotation = new QAToken(jcas);
+        Token annotation = new Token(jcas);
         end = begin + st.nextToken().length();
         annotation.setBegin(begin);
         annotation.setEnd(end);

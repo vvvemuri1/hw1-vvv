@@ -2,7 +2,7 @@
 
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
     <name>hw1-vvv-typesystem</name>
-    <description/>
+    <description>UIMA Type System for Sample Information Processor.</description>
     <version>1.0</version>
     <vendor/>
   <types>
@@ -29,7 +29,7 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>Types.Processed.QAToken</name>
+      <name>Types.Processed.Token</name>
       <description>Token in question/answer (delimited by whitespace and punctuation).</description>
       <supertypeName>Types.BaseAnnotation</supertypeName>
     <features>
@@ -46,15 +46,15 @@
       <supertypeName>Types.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
-          <name>elements</name>
-          <description>Tokens in NGram.</description>
-          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-          <elementType>Types.Processed.QAToken</elementType>
-        </featureDescription>
-      <featureDescription>
           <name>elementType</name>
           <description>Type of the Objects stored in 'elements' array.</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>elements</name>
+          <description>Tokens in NGram.</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>Types.TestElement.Answer</elementType>
         </featureDescription>
       </features>
     </typeDescription>

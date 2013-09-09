@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 12:48:42 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:02:06 EDT 2013
  * @generated */
 public class NGram_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -46,6 +46,24 @@ public class NGram_Type extends BaseAnnotation_Type {
 
 
 
+  /** @generated */
+  final Feature casFeat_elementType;
+  /** @generated */
+  final int     casFeatCode_elementType;
+  /** @generated */ 
+  public String getElementType(int addr) {
+        if (featOkTst && casFeat_elementType == null)
+      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_elementType);
+  }
+  /** @generated */    
+  public void setElementType(int addr, String v) {
+        if (featOkTst && casFeat_elementType == null)
+      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
+    ll_cas.ll_setStringValue(addr, casFeatCode_elementType, v);}
+    
+  
+ 
   /** @generated */
   final Feature casFeat_elements;
   /** @generated */
@@ -82,24 +100,6 @@ public class NGram_Type extends BaseAnnotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v);
   }
  
- 
-  /** @generated */
-  final Feature casFeat_elementType;
-  /** @generated */
-  final int     casFeatCode_elementType;
-  /** @generated */ 
-  public String getElementType(int addr) {
-        if (featOkTst && casFeat_elementType == null)
-      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_elementType);
-  }
-  /** @generated */    
-  public void setElementType(int addr, String v) {
-        if (featOkTst && casFeat_elementType == null)
-      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
-    ll_cas.ll_setStringValue(addr, casFeatCode_elementType, v);}
-    
-  
 
 
 
@@ -110,12 +110,12 @@ public class NGram_Type extends BaseAnnotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_elements = jcas.getRequiredFeatureDE(casType, "elements", "uima.cas.FSArray", featOkTst);
-    casFeatCode_elements  = (null == casFeat_elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elements).getCode();
-
- 
     casFeat_elementType = jcas.getRequiredFeatureDE(casType, "elementType", "uima.cas.String", featOkTst);
     casFeatCode_elementType  = (null == casFeat_elementType) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elementType).getCode();
+
+ 
+    casFeat_elements = jcas.getRequiredFeatureDE(casType, "elements", "uima.cas.FSArray", featOkTst);
+    casFeatCode_elements  = (null == casFeat_elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elements).getCode();
 
   }
 }

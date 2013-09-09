@@ -13,7 +13,7 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.Processed.QAToken</name>
+          <name>Types.Processed.Token</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
           <supertypeName>Types.BaseAnnotation</supertypeName>
         <features>
@@ -55,7 +55,7 @@
           <type allAnnotatorFeatures="true">Types.TestElement.Sentence</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.Token</type>
         </outputs>
         <languagesSupported/>
       </capability>

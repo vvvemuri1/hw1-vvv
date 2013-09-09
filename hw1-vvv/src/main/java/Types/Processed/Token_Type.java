@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sun Sep 08 20:45:45 EDT 2013 */
+/* First created by JCasGen Mon Sep 09 12:59:41 EDT 2013 */
 package Types.Processed;
 
 import org.apache.uima.jcas.JCas;
@@ -13,12 +13,10 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
-import org.apache.uima.jcas.tcas.Annotation_Type;
-
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 12:49:25 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
  * @generated */
-public class QAToken_Type extends BaseAnnotation_Type {
+public class Token_Type extends BaseAnnotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -26,28 +24,26 @@ public class QAToken_Type extends BaseAnnotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (QAToken_Type.this.useExistingInstance) {
+  			 if (Token_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = QAToken_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Token_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new QAToken(addr, QAToken_Type.this);
-  			   QAToken_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Token(addr, Token_Type.this);
+  			   Token_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new QAToken(addr, QAToken_Type.this);
+        } else return new Token(addr, Token_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = QAToken.typeIndexID;
+  public final static int typeIndexID = Token.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.QAToken");
-
-
-
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.Token");
+ 
   /** @generated */
   final Feature casFeat_sentenceIndex;
   /** @generated */
@@ -55,13 +51,13 @@ public class QAToken_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public int getSentenceIndex(int addr) {
         if (featOkTst && casFeat_sentenceIndex == null)
-      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.QAToken");
+      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
     return ll_cas.ll_getIntValue(addr, casFeatCode_sentenceIndex);
   }
   /** @generated */    
   public void setSentenceIndex(int addr, int v) {
         if (featOkTst && casFeat_sentenceIndex == null)
-      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.QAToken");
+      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
     ll_cas.ll_setIntValue(addr, casFeatCode_sentenceIndex, v);}
     
   
@@ -70,7 +66,7 @@ public class QAToken_Type extends BaseAnnotation_Type {
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public QAToken_Type(JCas jcas, Type casType) {
+  public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

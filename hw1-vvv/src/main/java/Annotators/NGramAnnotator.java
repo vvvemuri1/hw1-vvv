@@ -9,22 +9,22 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
 import Types.Processed.NGram;
-import Types.Processed.QAToken;
+import Types.Processed.Token;
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase 
 {  
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException 
   {
-    FSIndex tokenIndex = jcas.getAnnotationIndex(QAToken.type);
+    FSIndex tokenIndex = jcas.getAnnotationIndex(Token.type);
     Iterator tokenIter = tokenIndex.iterator();
     
-    QAToken prevPrevToken = null;
-    QAToken prevToken = null;
+    Token prevPrevToken = null;
+    Token prevToken = null;
     
     while(tokenIter.hasNext())
     {
-      QAToken qaToken = (QAToken) tokenIter.next();      
+      Token qaToken = (Token) tokenIter.next();      
 
       int sentenceIndex = setupUnigram(jcas, qaToken);
       setupBigram(jcas, prevToken, qaToken, sentenceIndex);
@@ -35,7 +35,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     }
   }
 
-  private int setupUnigram(JCas jcas, QAToken qaToken) 
+  private int setupUnigram(JCas jcas, Token qaToken) 
   {
     NGram annotation = new NGram(jcas);
     annotation.setBegin(qaToken.getBegin());
@@ -53,7 +53,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     return sentenceIndex;
   }
 
-  private void setupBigram(JCas jcas, QAToken prevToken, QAToken qaToken, int sentenceIndex)
+  private void setupBigram(JCas jcas, Token prevToken, Token qaToken, int sentenceIndex)
   {
     NGram annotation;
     FSArray elements;
@@ -77,7 +77,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     }
   }
   
-  private void setupTrigram(JCas jcas, QAToken prevPrevToken, QAToken prevToken, QAToken qaToken,
+  private void setupTrigram(JCas jcas, Token prevPrevToken, Token prevToken, Token qaToken,
           int sentenceIndex) 
   {
     NGram annotation;

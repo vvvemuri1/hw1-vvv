@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import Types.BaseAnnotation_Type;
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 12:49:25 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
  * @generated */
 public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */
