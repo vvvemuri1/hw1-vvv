@@ -95,11 +95,7 @@ public class Answer extends QuestionAnswer implements Comparable {
   @Override
   public int compareTo(Object obj) 
   {
-    System.out.println("obj: " + obj);
     Answer answer = (Answer) obj; 
-    System.out.println("Answer: " + answer);
-    System.out.println("Answer Score1: " + getScore());
-    System.out.println("Answer Score1: " + answer.getScore());
     return (int)(getScore() - answer.getScore());
   }
 }

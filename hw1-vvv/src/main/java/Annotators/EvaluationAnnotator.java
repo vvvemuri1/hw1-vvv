@@ -1,6 +1,5 @@
 package Annotators;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -34,12 +33,12 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase
       {
         answerStart = answer.getBegin();
       }
-      else if (!answerIter.hasNext())
+      else if (i == answerIndex.size() - 1)
       {
         answerEnd = answer.getEnd();
       }
       
-      answers.set(i, answer);
+      answers.set(i++, answer);
       if (answer.getIsCorrect())
       {
         correct++;
@@ -50,15 +49,39 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase
     annotation.setBegin(answerStart);
     annotation.setEnd(answerEnd);
     annotation.setCasProcessorId(EvaluationAnnotator.class.getName());
+    annotation.setConfidence(1.0f);
     
     // Sort answers
-    //Arrays.sort(answers.toArray());
-    //annotation.setSortedAnswers(answers);
+    sortAnswers(answerIndex, answers);    
+    annotation.setSortedAnswers(answers);
 
     // Compute Precision
-    //float precision = correct/(answers.size());
-    //annotation.setPrecision(precision);
+    float precision = correct/(answers.size());
+    annotation.setPrecision(precision);
     
     annotation.addToIndexes();
+  }
+
+  private void sortAnswers(FSIndex answerIndex, FSArray answers) 
+  {
+    for (int j = 0; j < answerIndex.size() - 1; j++)
+    {
+      Answer max = (Answer) answers.get(j);
+      int maxIndex = j;
+      
+      for (int k = j + 1; k < answerIndex.size() - 1; k++)
+      {
+        Answer current = (Answer)answers.get(k);
+        if ((current).getScore() > max.getScore())
+        {
+          max = current;
+          maxIndex = k;
+        }
+      }
+
+      Answer temp = (Answer)answers.get(j);
+      answers.set(j, max);
+      answers.set(maxIndex, temp);
+    }
   }
 }
