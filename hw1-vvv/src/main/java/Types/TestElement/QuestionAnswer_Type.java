@@ -15,8 +15,8 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Mon Sep 09 01:25:54 EDT 2013
+/** SuperType of Question and Answer.
+ * Updated by JCasGen Mon Sep 09 09:47:02 EDT 2013
  * @generated */
 public class QuestionAnswer_Type extends AbstractAnnotation_Type {
   /** @generated */

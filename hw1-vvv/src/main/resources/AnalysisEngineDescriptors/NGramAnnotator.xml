@@ -18,24 +18,6 @@
           <supertypeName>Types.AbstractAnnotation</supertypeName>
         </typeDescription>
         <typeDescription>
-          <name>Types.Processed.NGram</name>
-          <description>Type representing unigram, bigram or trigram in question/answer.</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
-        <features>
-            <featureDescription>
-              <name>elements</name>
-              <description>Tokens in NGram.</description>
-              <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>Types.Processed.QAToken</elementType>
-            </featureDescription>
-          <featureDescription>
-              <name>elementType</name>
-              <description>Type of the Objects stored in 'elements' array.</description>
-              <rangeTypeName>uima.cas.String</rangeTypeName>
-            </featureDescription>
-          </features>
-        </typeDescription>
-      <typeDescription>
           <name>Types.AbstractAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
@@ -53,14 +35,19 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.Processed.QAToken</name>
-          <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
-        <features>
+          <name>Types.TestElement.Answer</name>
+          <description>Proposed answer to question being asked in sample information processing task.</description>
+          <supertypeName>Types.TestElement.QuestionAnswer</supertypeName>
+          <features>
             <featureDescription>
-              <name>sentenceIndex</name>
-              <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
-              <rangeTypeName>uima.cas.Integer</rangeTypeName>
+              <name>IsCorrect</name>
+              <description>Boolean Flag indicating whether or not the proposed answer is correct.</description>
+              <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+            </featureDescription>
+          <featureDescription>
+              <name>score</name>
+              <description>Answer score (assigned using Gold Answer Scoring System).</description>
+              <rangeTypeName>uima.cas.Float</rangeTypeName>
             </featureDescription>
           </features>
         </typeDescription>
@@ -72,9 +59,7 @@
         <inputs>
           <type allAnnotatorFeatures="true">Types.TestElement.QuestionAnswer</type>
         </inputs>
-        <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.NGram</type>
-        </outputs>
+        <outputs/>
         <languagesSupported/>
       </capability>
     </capabilities>

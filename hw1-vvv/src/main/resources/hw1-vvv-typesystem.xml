@@ -21,6 +21,11 @@
           <description>Boolean Flag indicating whether or not the proposed answer is correct.</description>
           <rangeTypeName>uima.cas.Boolean</rangeTypeName>
         </featureDescription>
+      <featureDescription>
+          <name>score</name>
+          <description>Answer score (assigned using Gold Answer Scoring System).</description>
+          <rangeTypeName>uima.cas.Float</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>

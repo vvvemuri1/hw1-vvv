@@ -2,16 +2,39 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>Annotators.TestElementAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>Annotators.AnswerScoringAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>TestElementAnnotator</name>
-    <description>The system will read in the input ﬁle as a UIMA CAS and annotate the question and answer spans. Each answer annotation will also record whether or not the answer is correct.</description>
+    <name>AnswerScoringAnnotator</name>
+    <description>The system will incorporate a component that will assign
+an answer score annotation to each answer. The answer score annotation will record the score assigned to the answer</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
     <typeSystemDescription>
       <types>
+        <typeDescription>
+          <name>Types.AbstractAnnotation</name>
+          <description>Common core attributes shared by all types.</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>casProcessorId</name>
+              <description>componentId of creator.</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+            </featureDescription>
+            <featureDescription>
+              <name>confidence</name>
+              <description>Confidence of the creator in the correctness of the output on a scale of 0 to 1.0.</description>
+              <rangeTypeName>uima.cas.Float</rangeTypeName>
+            </featureDescription>
+          </features>
+        </typeDescription>
+        <typeDescription>
+          <name>Types.TestElement.QuestionAnswer</name>
+          <description>SuperType of Question and Answer.</description>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
+        </typeDescription>
         <typeDescription>
           <name>Types.TestElement.Question</name>
           <description>Question being asked in sample information processing task.</description>
@@ -34,28 +57,6 @@
             </featureDescription>
           </features>
         </typeDescription>
-      <typeDescription>
-          <name>Types.TestElement.QuestionAnswer</name>
-          <description/>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
-        </typeDescription>
-      <typeDescription>
-          <name>Types.AbstractAnnotation</name>
-          <description>Common core attributes shared by all types.</description>
-          <supertypeName>uima.tcas.Annotation</supertypeName>
-        <features>
-            <featureDescription>
-              <name>casProcessorId</name>
-              <description>componentId of creator.</description>
-              <rangeTypeName>uima.cas.String</rangeTypeName>
-            </featureDescription>
-            <featureDescription>
-              <name>confidence</name>
-              <description>Confidence of the creator in the correctness of the output on a scale of 0 to 1.0.</description>
-              <rangeTypeName>uima.cas.Float</rangeTypeName>
-            </featureDescription>
-          </features>
-        </typeDescription>
       </types>
     </typeSystemDescription>
     <typePriorities/>
@@ -63,11 +64,7 @@
     <capabilities>
       <capability>
         <inputs/>
-        <outputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.Question</type>
-          <type>Types.TestElement.Answer</type>
-          <feature>Types.TestElement.Answer:IsCorrect</feature>
-        </outputs>
+        <outputs/>
         <languagesSupported/>
       </capability>
     </capabilities>

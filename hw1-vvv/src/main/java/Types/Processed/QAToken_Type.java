@@ -16,7 +16,7 @@ import Types.AbstractAnnotation_Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 01:25:54 EDT 2013
+ * Updated by JCasGen Mon Sep 09 09:43:50 EDT 2013
  * @generated */
 public class QAToken_Type extends AbstractAnnotation_Type {
   /** @generated */

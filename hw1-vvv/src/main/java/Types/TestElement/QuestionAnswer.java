@@ -13,9 +13,9 @@ import Types.AbstractAnnotation;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Mon Sep 09 01:25:54 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/NGramAnnotator.xml
+/** SuperType of Question and Answer.
+ * Updated by JCasGen Mon Sep 09 09:47:02 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/FullAnalysisEngine.xml
  * @generated */
 public class QuestionAnswer extends AbstractAnnotation {
   /** @generated

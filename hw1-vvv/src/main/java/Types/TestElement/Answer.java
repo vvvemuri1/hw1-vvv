@@ -7,9 +7,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import Types.AbstractAnnotation;
+
+
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 01:25:29 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Mon Sep 09 09:47:02 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/FullAnalysisEngine.xml
  * @generated */
 public class Answer extends QuestionAnswer {
   /** @generated
@@ -75,6 +78,24 @@ public class Answer extends QuestionAnswer {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_IsCorrect == null)
       jcasType.jcas.throwFeatMissing("IsCorrect", "Types.TestElement.Answer");
     jcasType.ll_cas.ll_setBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_IsCorrect, v);}    
+   
+    
+  //*--------------*
+  //* Feature: score
+
+  /** getter for score - gets Answer score (assigned using Gold Answer Scoring System).
+   * @generated */
+  public float getScore() {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
+      jcasType.jcas.throwFeatMissing("score", "Types.TestElement.Answer");
+    return jcasType.ll_cas.ll_getFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score);}
+    
+  /** setter for score - sets Answer score (assigned using Gold Answer Scoring System). 
+   * @generated */
+  public void setScore(float v) {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
+      jcasType.jcas.throwFeatMissing("score", "Types.TestElement.Answer");
+    jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}    
   }
 
     

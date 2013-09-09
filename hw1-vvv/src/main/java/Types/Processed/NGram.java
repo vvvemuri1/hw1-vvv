@@ -15,8 +15,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 01:25:54 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/NGramAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 09:36:00 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class NGram extends AbstractAnnotation {
   /** @generated

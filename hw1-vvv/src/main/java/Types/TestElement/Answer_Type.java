@@ -9,11 +9,13 @@ import org.apache.uima.cas.impl.FSGenerator;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
+import Types.AbstractAnnotation_Type;
+
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 01:25:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 09:47:02 EDT 2013
  * @generated */
 public class Answer_Type extends QuestionAnswer_Type {
   /** @generated */
@@ -60,6 +62,24 @@ public class Answer_Type extends QuestionAnswer_Type {
     ll_cas.ll_setBooleanValue(addr, casFeatCode_IsCorrect, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_score;
+  /** @generated */
+  final int     casFeatCode_score;
+  /** @generated */ 
+  public float getScore(int addr) {
+        if (featOkTst && casFeat_score == null)
+      jcas.throwFeatMissing("score", "Types.TestElement.Answer");
+    return ll_cas.ll_getFloatValue(addr, casFeatCode_score);
+  }
+  /** @generated */    
+  public void setScore(int addr, float v) {
+        if (featOkTst && casFeat_score == null)
+      jcas.throwFeatMissing("score", "Types.TestElement.Answer");
+    ll_cas.ll_setFloatValue(addr, casFeatCode_score, v);}
+    
+  
 
 
 
@@ -72,6 +92,10 @@ public class Answer_Type extends QuestionAnswer_Type {
  
     casFeat_IsCorrect = jcas.getRequiredFeatureDE(casType, "IsCorrect", "uima.cas.Boolean", featOkTst);
     casFeatCode_IsCorrect  = (null == casFeat_IsCorrect) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_IsCorrect).getCode();
+
+ 
+    casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Float", featOkTst);
+    casFeatCode_score  = (null == casFeat_score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_score).getCode();
 
   }
 }
