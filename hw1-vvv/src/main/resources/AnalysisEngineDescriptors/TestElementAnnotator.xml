@@ -15,12 +15,12 @@
         <typeDescription>
           <name>Types.TestElement.Question</name>
           <description>Question being asked in sample information processing task.</description>
-          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <supertypeName>Types.TestElement.QA</supertypeName>
         </typeDescription>
         <typeDescription>
           <name>Types.TestElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
-          <supertypeName>uima.tcas.Annotation</supertypeName>
+          <supertypeName>Types.TestElement.QA</supertypeName>
           <features>
             <featureDescription>
               <name>IsCorrect</name>
@@ -28,6 +28,11 @@
               <rangeTypeName>uima.cas.Boolean</rangeTypeName>
             </featureDescription>
           </features>
+        </typeDescription>
+      <typeDescription>
+          <name>Types.TestElement.QA</name>
+          <description/>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
       </types>
     </typeSystemDescription>

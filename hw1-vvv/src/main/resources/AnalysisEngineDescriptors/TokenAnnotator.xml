@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>Annotators.TokenAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>TokenAnnotator</name>
+    <description>The system will annotate each token span in each question
+and answer (break on whitespace and punctuation).</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <types>
+        <typeDescription>
+          <name>Types.Token.QAToken</name>
+          <description>Token in question/answer (delimited by whitespace and punctuation).</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+      <typeDescription>
+          <name>Types.TestElement.QA</name>
+          <description>SuperType of Question and Answer.</description>
+          <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+      </types>
+    </typeSystemDescription>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">Types.TestElement.QA</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">Types.Token.QAToken</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

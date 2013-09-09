@@ -29,7 +29,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
     while (matcher.find(position)) 
     {
       Question annotation = new Question(jcas);
-      annotation.setBegin(matcher.start());
+      annotation.setBegin(matcher.start() + 2);
       annotation.setEnd(matcher.end());
       annotation.addToIndexes();
       position = matcher.end();
@@ -46,7 +46,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
 
       String answer = annotation.getCoveredText();
       StringTokenizer st = new StringTokenizer(answer);
-      
+            
       if (st.hasMoreTokens())
       {
         st.nextToken();
@@ -76,9 +76,8 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       {
         throw new NoSuchElementException("Invalid answer: " + answer);
       }
-      
-      System.out.println(annotation.getCoveredText());
-      
+            
+      annotation.setBegin(matcher.start() + 4);
       annotation.addToIndexes();
       position = matcher.end();
     }

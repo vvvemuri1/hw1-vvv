@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 1-gram in question/answer.
- * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
+ * Updated by JCasGen Sun Sep 08 19:15:52 EDT 2013
  * @generated */
 public class Unigram_Type extends Annotation_Type {
   /** @generated */

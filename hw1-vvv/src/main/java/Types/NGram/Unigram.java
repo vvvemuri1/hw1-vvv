@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 1-gram in question/answer.
- * Updated by JCasGen Sun Sep 08 15:53:32 EDT 2013
+ * Updated by JCasGen Sun Sep 08 19:15:52 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class Unigram extends Annotation {

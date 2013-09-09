@@ -9,12 +9,12 @@
     <typeDescription>
       <name>Types.TestElement.Question</name>
       <description>Question being asked in sample information processing task.</description>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <supertypeName>Types.TestElement.QA</supertypeName>
     </typeDescription>
     <typeDescription>
       <name>Types.TestElement.Answer</name>
       <description>Proposed answer to question being asked in sample information processing task.</description>
-      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <supertypeName>Types.TestElement.QA</supertypeName>
       <features>
         <featureDescription>
           <name>IsCorrect</name>
@@ -41,6 +41,11 @@
     <typeDescription>
       <name>Types.NGram.Trigram</name>
       <description>3-gram of consecutive tokens in question/answer.</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+  <typeDescription>
+      <name>Types.TestElement.QA</name>
+      <description>SuperType of Question and Answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
   </types>

@@ -7,14 +7,17 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import Types.Token.QAToken;
+
+
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 17:24:28 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/TestElementAnnotator.xml
+ * Updated by JCasGen Sun Sep 08 20:27:03 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAndToken.xml
  * @generated */
-public class Answer extends Annotation {
+public class Answer extends QA {
   /** @generated
    * @ordered 
    */
