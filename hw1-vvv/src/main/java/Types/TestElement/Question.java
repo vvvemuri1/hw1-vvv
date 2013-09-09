@@ -9,8 +9,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 21:28:28 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAndNGram.xml
+ * Updated by JCasGen Sun Sep 08 22:53:02 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAnnotator.xml
  * @generated */
 public class Question extends QuestionAnswer {
   /** @generated

@@ -9,12 +9,14 @@ import org.apache.uima.cas.impl.FSGenerator;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
+import Types.AbstractAnnotation_Type;
+
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Sun Sep 08 21:28:28 EDT 2013
+ * Updated by JCasGen Sun Sep 08 22:52:37 EDT 2013
  * @generated */
-public class NGram_Type extends Annotation_Type {
+public class NGram_Type extends AbstractAnnotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}

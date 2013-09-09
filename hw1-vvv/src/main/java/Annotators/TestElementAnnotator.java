@@ -31,6 +31,8 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       Question annotation = new Question(jcas);
       annotation.setBegin(matcher.start() + 2);
       annotation.setEnd(matcher.end());
+      annotation.setCasProcessorId(TestElementAnnotator.class.getName());
+      annotation.setConfidence(1.0f);
       annotation.addToIndexes();
       position = matcher.end();
     }
@@ -43,6 +45,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       Answer annotation = new Answer(jcas);
       annotation.setBegin(matcher.start());
       annotation.setEnd(matcher.end());
+      annotation.setCasProcessorId(TestElementAnnotator.class.getName());
 
       String answer = annotation.getCoveredText();
       StringTokenizer st = new StringTokenizer(answer);
@@ -61,10 +64,12 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
           String isCorrect = st.nextToken();
           if (Integer.parseInt(isCorrect) == 0)
           {
+            annotation.setConfidence(0f);
             annotation.setIsCorrect(false);
           }
           else if (Integer.parseInt(isCorrect) == 1)
           {
+            annotation.setConfidence(1.0f);
             annotation.setIsCorrect(true);
           }
           else
