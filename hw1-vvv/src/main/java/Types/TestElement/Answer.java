@@ -1,5 +1,3 @@
-
-
 /* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
 package Types.TestElement;
 
@@ -9,10 +7,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 import Types.AbstractAnnotation;
 
-
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 10:03:55 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/EvaluationAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 10:29:11 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
  * @generated */
 public class Answer extends QuestionAnswer {
   /** @generated
@@ -59,9 +56,7 @@ public class Answer extends QuestionAnswer {
     * <!-- end-user-doc -->
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
-     
- 
-    
+         
   //*--------------*
   //* Feature: IsCorrect
 
@@ -95,7 +90,14 @@ public class Answer extends QuestionAnswer {
   public void setScore(float v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "Types.TestElement.Answer");
-    jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}    
+    jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}      
+
+  public int compare(Answer answer)
+  {
+    return (int)(getScore() - answer.getScore());
   }
+}
+
+
 
     

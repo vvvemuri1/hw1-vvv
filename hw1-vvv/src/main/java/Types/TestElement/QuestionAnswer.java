@@ -14,8 +14,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 10:03:55 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/EvaluationAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 10:29:11 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
  * @generated */
 public class QuestionAnswer extends AbstractAnnotation {
   /** @generated

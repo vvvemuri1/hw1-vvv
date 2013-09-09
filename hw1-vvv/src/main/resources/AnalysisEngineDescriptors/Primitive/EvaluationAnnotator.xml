@@ -51,6 +51,24 @@
             </featureDescription>
           </features>
         </typeDescription>
+      <typeDescription>
+          <name>Types.Processed.Evaluation</name>
+          <description>Evaluation of the answers to the question.</description>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>SortedAnswers</name>
+              <description>Answers sorted according to their scores.</description>
+              <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+              <elementType>Types.TestElement.Answer</elementType>
+            </featureDescription>
+            <featureDescription>
+              <name>Precision</name>
+              <description>Average Precision of the answers to the question (#correct / #predicted).</description>
+              <rangeTypeName>uima.cas.Float</rangeTypeName>
+            </featureDescription>
+          </features>
+        </typeDescription>
       </types>
     </typeSystemDescription>
     <typePriorities/>
