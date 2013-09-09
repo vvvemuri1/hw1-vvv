@@ -18,14 +18,13 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
   {
     FSIndex qaIndex = jcas.getAnnotationIndex(Sentence.type);
     Iterator qaIter = qaIndex.iterator();
-    int sentenceIndex = 0;
     
     while(qaIter.hasNext())
     {
-      Sentence questionAnswer = (Sentence) qaIter.next();
-      StringTokenizer st = new StringTokenizer(questionAnswer.getCoveredText()," ?.");
+      Sentence sentence = (Sentence) qaIter.next();
+      StringTokenizer st = new StringTokenizer(sentence.getCoveredText()," ?.");
       
-      int begin = questionAnswer.getBegin();
+      int begin = sentence.getBegin();
       int end = begin;
               
       while (st.hasMoreTokens())
@@ -34,14 +33,12 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
         end = begin + st.nextToken().length();
         annotation.setBegin(begin);
         annotation.setEnd(end);
-        annotation.setConfidence(questionAnswer.getConfidence());
+        annotation.setConfidence(sentence.getConfidence());
         annotation.setCasProcessorId(TokenAnnotator.class.getName());
-        annotation.setSentenceIndex(sentenceIndex);
+        annotation.setSentenceId(sentence.getSentenceId());
         annotation.addToIndexes();
         begin = end + 1;
       }
-      
-      sentenceIndex++;
     }
   }
 }

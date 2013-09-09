@@ -9,10 +9,12 @@ import org.apache.uima.cas.impl.FSGenerator;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
+import org.apache.uima.cas.impl.FeatureImpl;
+import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
  * @generated */
 public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -44,11 +46,35 @@ public class Sentence_Type extends BaseAnnotation_Type {
 
 
 
+  /** @generated */
+  final Feature casFeat_SentenceId;
+  /** @generated */
+  final int     casFeatCode_SentenceId;
+  /** @generated */ 
+  public int getSentenceId(int addr) {
+        if (featOkTst && casFeat_SentenceId == null)
+      jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_SentenceId);
+  }
+  /** @generated */    
+  public void setSentenceId(int addr, int v) {
+        if (featOkTst && casFeat_SentenceId == null)
+      jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
+    ll_cas.ll_setIntValue(addr, casFeatCode_SentenceId, v);}
+    
+  
+
+
+
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
   public Sentence_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
+
+ 
+    casFeat_SentenceId = jcas.getRequiredFeatureDE(casType, "SentenceId", "uima.cas.Integer", featOkTst);
+    casFeatCode_SentenceId  = (null == casFeat_SentenceId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_SentenceId).getCode();
 
   }
 }

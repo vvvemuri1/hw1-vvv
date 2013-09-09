@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
  * @generated */
 public class Token_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -45,20 +45,20 @@ public class Token_Type extends BaseAnnotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.Token");
  
   /** @generated */
-  final Feature casFeat_sentenceIndex;
+  final Feature casFeat_SentenceId;
   /** @generated */
-  final int     casFeatCode_sentenceIndex;
+  final int     casFeatCode_SentenceId;
   /** @generated */ 
-  public int getSentenceIndex(int addr) {
-        if (featOkTst && casFeat_sentenceIndex == null)
-      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
-    return ll_cas.ll_getIntValue(addr, casFeatCode_sentenceIndex);
+  public int getSentenceId(int addr) {
+        if (featOkTst && casFeat_SentenceId == null)
+      jcas.throwFeatMissing("SentenceId", "Types.Processed.Token");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_SentenceId);
   }
   /** @generated */    
-  public void setSentenceIndex(int addr, int v) {
-        if (featOkTst && casFeat_sentenceIndex == null)
-      jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
-    ll_cas.ll_setIntValue(addr, casFeatCode_sentenceIndex, v);}
+  public void setSentenceId(int addr, int v) {
+        if (featOkTst && casFeat_SentenceId == null)
+      jcas.throwFeatMissing("SentenceId", "Types.Processed.Token");
+    ll_cas.ll_setIntValue(addr, casFeatCode_SentenceId, v);}
     
   
 
@@ -71,8 +71,8 @@ public class Token_Type extends BaseAnnotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_sentenceIndex = jcas.getRequiredFeatureDE(casType, "sentenceIndex", "uima.cas.Integer", featOkTst);
-    casFeatCode_sentenceIndex  = (null == casFeat_sentenceIndex) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentenceIndex).getCode();
+    casFeat_SentenceId = jcas.getRequiredFeatureDE(casType, "SentenceId", "uima.cas.Integer", featOkTst);
+    casFeatCode_SentenceId  = (null == casFeat_SentenceId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_SentenceId).getCode();
 
   }
 }

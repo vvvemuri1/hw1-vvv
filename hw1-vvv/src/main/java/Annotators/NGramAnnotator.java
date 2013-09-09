@@ -44,7 +44,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     annotation.setCasProcessorId(NGramAnnotator.class.getName());
     annotation.setElementType(qaToken.getClass().getName());
     
-    int sentenceIndex = qaToken.getSentenceIndex();
+    int sentenceIndex = qaToken.getSentenceId();
     FSArray elements = new FSArray(jcas,1);
     elements.set(0, qaToken);
     
@@ -58,7 +58,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     NGram annotation;
     FSArray elements;
     if (prevToken != null && 
-            sentenceIndex == prevToken.getSentenceIndex())
+            sentenceIndex == prevToken.getSentenceId())
     {
       annotation = new NGram(jcas);
       annotation.setBegin(prevToken.getBegin());
@@ -83,7 +83,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     NGram annotation;
     FSArray elements;
     if (prevPrevToken != null && 
-            sentenceIndex == prevPrevToken.getSentenceIndex())
+            sentenceIndex == prevPrevToken.getSentenceId())
     {
       annotation = new NGram(jcas);
       annotation.setBegin(prevPrevToken.getBegin());

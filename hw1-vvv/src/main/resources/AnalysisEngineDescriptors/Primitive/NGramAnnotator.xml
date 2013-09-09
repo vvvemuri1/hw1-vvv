@@ -16,6 +16,13 @@
           <name>Types.TestElement.Sentence</name>
           <description>SuperType of Question and Answer.</description>
           <supertypeName>Types.BaseAnnotation</supertypeName>
+        <features>
+            <featureDescription>
+              <name>SentenceId</name>
+              <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
+              <rangeTypeName>uima.cas.Integer</rangeTypeName>
+            </featureDescription>
+          </features>
         </typeDescription>
         <typeDescription>
           <name>Types.BaseAnnotation</name>
@@ -23,12 +30,12 @@
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
             <featureDescription>
-              <name>casProcessorId</name>
+              <name>CasProcessorId</name>
               <description>componentId of creator.</description>
               <rangeTypeName>uima.cas.String</rangeTypeName>
             </featureDescription>
             <featureDescription>
-              <name>confidence</name>
+              <name>Confidence</name>
               <description>Confidence of the creator in the correctness of the output on a scale of 0 to 1.0.</description>
               <rangeTypeName>uima.cas.Float</rangeTypeName>
             </featureDescription>
@@ -45,7 +52,7 @@
               <rangeTypeName>uima.cas.Boolean</rangeTypeName>
             </featureDescription>
           <featureDescription>
-              <name>score</name>
+              <name>Score</name>
               <description>Answer score (assigned using Gold Answer Scoring System).</description>
               <rangeTypeName>uima.cas.Float</rangeTypeName>
             </featureDescription>
@@ -57,13 +64,13 @@
           <supertypeName>Types.BaseAnnotation</supertypeName>
           <features>
             <featureDescription>
-              <name>elements</name>
+              <name>Elements</name>
               <description>Tokens in NGram.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
               <elementType>Types.TestElement.Answer</elementType>
             </featureDescription>
             <featureDescription>
-              <name>elementType</name>
+              <name>ElementType</name>
               <description>Type of the Objects stored in 'elements' array.</description>
               <rangeTypeName>uima.cas.String</rangeTypeName>
             </featureDescription>

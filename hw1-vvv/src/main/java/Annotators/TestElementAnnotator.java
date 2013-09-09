@@ -23,6 +23,8 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
     // get document text
     String docText = jcas.getDocumentText();
 
+    int sentenceId = 0;
+    
     // search for Question
     Matcher matcher = questionPattern.matcher(docText);
     int position = 0;
@@ -33,6 +35,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       annotation.setEnd(matcher.end());
       annotation.setCasProcessorId(TestElementAnnotator.class.getName());
       annotation.setConfidence(1.0f);
+      annotation.setSentenceId(sentenceId++);
       annotation.addToIndexes();
       position = matcher.end();
     }
@@ -45,6 +48,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       Answer annotation = new Answer(jcas);
       annotation.setBegin(matcher.start());
       annotation.setEnd(matcher.end());
+      annotation.setSentenceId(sentenceId++);
       annotation.setCasProcessorId(TestElementAnnotator.class.getName());
 
       String answer = annotation.getCoveredText();

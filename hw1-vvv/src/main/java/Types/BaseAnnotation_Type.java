@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Common core attributes shared by all types.
- * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
  * @generated */
 public class BaseAnnotation_Type extends Annotation_Type {
   /** @generated */
@@ -45,38 +45,38 @@ public class BaseAnnotation_Type extends Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.BaseAnnotation");
  
   /** @generated */
-  final Feature casFeat_casProcessorId;
+  final Feature casFeat_CasProcessorId;
   /** @generated */
-  final int     casFeatCode_casProcessorId;
+  final int     casFeatCode_CasProcessorId;
   /** @generated */ 
   public String getCasProcessorId(int addr) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "Types.BaseAnnotation");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
+        if (featOkTst && casFeat_CasProcessorId == null)
+      jcas.throwFeatMissing("CasProcessorId", "Types.BaseAnnotation");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_CasProcessorId);
   }
   /** @generated */    
   public void setCasProcessorId(int addr, String v) {
-        if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "Types.BaseAnnotation");
-    ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
+        if (featOkTst && casFeat_CasProcessorId == null)
+      jcas.throwFeatMissing("CasProcessorId", "Types.BaseAnnotation");
+    ll_cas.ll_setStringValue(addr, casFeatCode_CasProcessorId, v);}
     
   
  
   /** @generated */
-  final Feature casFeat_confidence;
+  final Feature casFeat_Confidence;
   /** @generated */
-  final int     casFeatCode_confidence;
+  final int     casFeatCode_Confidence;
   /** @generated */ 
   public float getConfidence(int addr) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Types.BaseAnnotation");
-    return ll_cas.ll_getFloatValue(addr, casFeatCode_confidence);
+        if (featOkTst && casFeat_Confidence == null)
+      jcas.throwFeatMissing("Confidence", "Types.BaseAnnotation");
+    return ll_cas.ll_getFloatValue(addr, casFeatCode_Confidence);
   }
   /** @generated */    
   public void setConfidence(int addr, float v) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Types.BaseAnnotation");
-    ll_cas.ll_setFloatValue(addr, casFeatCode_confidence, v);}
+        if (featOkTst && casFeat_Confidence == null)
+      jcas.throwFeatMissing("Confidence", "Types.BaseAnnotation");
+    ll_cas.ll_setFloatValue(addr, casFeatCode_Confidence, v);}
     
   
 
@@ -89,12 +89,12 @@ public class BaseAnnotation_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_casProcessorId = jcas.getRequiredFeatureDE(casType, "casProcessorId", "uima.cas.String", featOkTst);
-    casFeatCode_casProcessorId  = (null == casFeat_casProcessorId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_casProcessorId).getCode();
+    casFeat_CasProcessorId = jcas.getRequiredFeatureDE(casType, "CasProcessorId", "uima.cas.String", featOkTst);
+    casFeatCode_CasProcessorId  = (null == casFeat_CasProcessorId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_CasProcessorId).getCode();
 
  
-    casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Float", featOkTst);
-    casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
+    casFeat_Confidence = jcas.getRequiredFeatureDE(casType, "Confidence", "uima.cas.Float", featOkTst);
+    casFeatCode_Confidence  = (null == casFeat_Confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Confidence).getCode();
 
   }
 }

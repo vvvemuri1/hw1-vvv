@@ -14,7 +14,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 13:02:06 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:17:51 EDT 2013
  * @generated */
 public class Answer_Type extends Sentence_Type {
   /** @generated */
@@ -63,20 +63,20 @@ public class Answer_Type extends Sentence_Type {
   
  
   /** @generated */
-  final Feature casFeat_score;
+  final Feature casFeat_Score;
   /** @generated */
-  final int     casFeatCode_score;
+  final int     casFeatCode_Score;
   /** @generated */ 
   public float getScore(int addr) {
-        if (featOkTst && casFeat_score == null)
-      jcas.throwFeatMissing("score", "Types.TestElement.Answer");
-    return ll_cas.ll_getFloatValue(addr, casFeatCode_score);
+        if (featOkTst && casFeat_Score == null)
+      jcas.throwFeatMissing("Score", "Types.TestElement.Answer");
+    return ll_cas.ll_getFloatValue(addr, casFeatCode_Score);
   }
   /** @generated */    
   public void setScore(int addr, float v) {
-        if (featOkTst && casFeat_score == null)
-      jcas.throwFeatMissing("score", "Types.TestElement.Answer");
-    ll_cas.ll_setFloatValue(addr, casFeatCode_score, v);}
+        if (featOkTst && casFeat_Score == null)
+      jcas.throwFeatMissing("Score", "Types.TestElement.Answer");
+    ll_cas.ll_setFloatValue(addr, casFeatCode_Score, v);}
     
   
 
@@ -93,8 +93,8 @@ public class Answer_Type extends Sentence_Type {
     casFeatCode_IsCorrect  = (null == casFeat_IsCorrect) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_IsCorrect).getCode();
 
  
-    casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Float", featOkTst);
-    casFeatCode_score  = (null == casFeat_score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_score).getCode();
+    casFeat_Score = jcas.getRequiredFeatureDE(casType, "Score", "uima.cas.Float", featOkTst);
+    casFeatCode_Score  = (null == casFeat_Score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Score).getCode();
 
   }
 }

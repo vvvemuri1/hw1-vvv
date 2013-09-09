@@ -11,7 +11,7 @@ import Types.BaseAnnotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Token extends BaseAnnotation {
@@ -63,21 +63,21 @@ public class Token extends BaseAnnotation {
  
     
   //*--------------*
-  //* Feature: sentenceIndex
+  //* Feature: SentenceId
 
-  /** getter for sentenceIndex - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
+  /** getter for SentenceId - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
    * @generated */
-  public int getSentenceIndex() {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_sentenceIndex == null)
-      jcasType.jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((Token_Type)jcasType).casFeatCode_sentenceIndex);}
+  public int getSentenceId() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_SentenceId == null)
+      jcasType.jcas.throwFeatMissing("SentenceId", "Types.Processed.Token");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Token_Type)jcasType).casFeatCode_SentenceId);}
     
-  /** setter for sentenceIndex - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
+  /** setter for SentenceId - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
    * @generated */
-  public void setSentenceIndex(int v) {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_sentenceIndex == null)
-      jcasType.jcas.throwFeatMissing("sentenceIndex", "Types.Processed.Token");
-    jcasType.ll_cas.ll_setIntValue(addr, ((Token_Type)jcasType).casFeatCode_sentenceIndex, v);}    
+  public void setSentenceId(int v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_SentenceId == null)
+      jcasType.jcas.throwFeatMissing("SentenceId", "Types.Processed.Token");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Token_Type)jcasType).casFeatCode_SentenceId, v);}    
   }
 
     

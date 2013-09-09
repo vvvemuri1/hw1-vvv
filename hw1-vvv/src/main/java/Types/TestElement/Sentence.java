@@ -11,7 +11,7 @@ import Types.BaseAnnotation;
 
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 13:04:29 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Sentence extends BaseAnnotation {
@@ -60,6 +60,22 @@ public class Sentence extends BaseAnnotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: SentenceId
+
+  /** getter for SentenceId - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
+   * @generated */
+  public int getSentenceId() {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_SentenceId == null)
+      jcasType.jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_SentenceId);}
+    
+  /** setter for SentenceId - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
+   * @generated */
+  public void setSentenceId(int v) {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_SentenceId == null)
+      jcasType.jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_SentenceId, v);}    
+  }
 
     

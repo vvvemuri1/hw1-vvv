@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 13:02:06 EDT 2013
+ * Updated by JCasGen Mon Sep 09 13:17:39 EDT 2013
  * @generated */
 public class NGram_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -47,62 +47,62 @@ public class NGram_Type extends BaseAnnotation_Type {
 
 
   /** @generated */
-  final Feature casFeat_elementType;
+  final Feature casFeat_ElementType;
   /** @generated */
-  final int     casFeatCode_elementType;
+  final int     casFeatCode_ElementType;
   /** @generated */ 
   public String getElementType(int addr) {
-        if (featOkTst && casFeat_elementType == null)
-      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_elementType);
+        if (featOkTst && casFeat_ElementType == null)
+      jcas.throwFeatMissing("ElementType", "Types.Processed.NGram");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_ElementType);
   }
   /** @generated */    
   public void setElementType(int addr, String v) {
-        if (featOkTst && casFeat_elementType == null)
-      jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
-    ll_cas.ll_setStringValue(addr, casFeatCode_elementType, v);}
+        if (featOkTst && casFeat_ElementType == null)
+      jcas.throwFeatMissing("ElementType", "Types.Processed.NGram");
+    ll_cas.ll_setStringValue(addr, casFeatCode_ElementType, v);}
     
   
- 
+
+
+
   /** @generated */
-  final Feature casFeat_elements;
+  final Feature casFeat_Elements;
   /** @generated */
-  final int     casFeatCode_elements;
+  final int     casFeatCode_Elements;
   /** @generated */ 
   public int getElements(int addr) {
-        if (featOkTst && casFeat_elements == null)
-      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_elements);
+        if (featOkTst && casFeat_Elements == null)
+      jcas.throwFeatMissing("Elements", "Types.Processed.NGram");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_Elements);
   }
   /** @generated */    
   public void setElements(int addr, int v) {
-        if (featOkTst && casFeat_elements == null)
-      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
-    ll_cas.ll_setRefValue(addr, casFeatCode_elements, v);}
+        if (featOkTst && casFeat_Elements == null)
+      jcas.throwFeatMissing("Elements", "Types.Processed.NGram");
+    ll_cas.ll_setRefValue(addr, casFeatCode_Elements, v);}
     
    /** @generated */
   public int getElements(int addr, int i) {
-        if (featOkTst && casFeat_elements == null)
-      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+        if (featOkTst && casFeat_Elements == null)
+      jcas.throwFeatMissing("Elements", "Types.Processed.NGram");
     if (lowLevelTypeChecks)
-      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
-  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i);
   }
    
   /** @generated */ 
   public void setElements(int addr, int i, int v) {
-        if (featOkTst && casFeat_elements == null)
-      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+        if (featOkTst && casFeat_Elements == null)
+      jcas.throwFeatMissing("Elements", "Types.Processed.NGram");
     if (lowLevelTypeChecks)
-      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
-    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v);
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i, v, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i, v);
   }
  
-
-
-
+ 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
   public NGram_Type(JCas jcas, Type casType) {
@@ -110,12 +110,12 @@ public class NGram_Type extends BaseAnnotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_elementType = jcas.getRequiredFeatureDE(casType, "elementType", "uima.cas.String", featOkTst);
-    casFeatCode_elementType  = (null == casFeat_elementType) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elementType).getCode();
+    casFeat_Elements = jcas.getRequiredFeatureDE(casType, "Elements", "uima.cas.FSArray", featOkTst);
+    casFeatCode_Elements  = (null == casFeat_Elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Elements).getCode();
 
  
-    casFeat_elements = jcas.getRequiredFeatureDE(casType, "elements", "uima.cas.FSArray", featOkTst);
-    casFeatCode_elements  = (null == casFeat_elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elements).getCode();
+    casFeat_ElementType = jcas.getRequiredFeatureDE(casType, "ElementType", "uima.cas.String", featOkTst);
+    casFeatCode_ElementType  = (null == casFeat_ElementType) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_ElementType).getCode();
 
   }
 }
