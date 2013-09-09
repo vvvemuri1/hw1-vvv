@@ -15,7 +15,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 01:10:39 EDT 2013
+ * Updated by JCasGen Mon Sep 09 01:25:54 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/NGramAnnotator.xml
  * @generated */
 public class NGram extends AbstractAnnotation {
@@ -96,6 +96,24 @@ public class NGram extends AbstractAnnotation {
       jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i, jcasType.ll_cas.ll_getFSRef(v));}
+   
+    
+  //*--------------*
+  //* Feature: elementType
+
+  /** getter for elementType - gets Type of the Objects stored in 'elements' array.
+   * @generated */
+  public String getElementType() {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)
+      jcasType.jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_elementType);}
+    
+  /** setter for elementType - sets Type of the Objects stored in 'elements' array. 
+   * @generated */
+  public void setElementType(String v) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)
+      jcasType.jcas.throwFeatMissing("elementType", "Types.Processed.NGram");
+    jcasType.ll_cas.ll_setStringValue(addr, ((NGram_Type)jcasType).casFeatCode_elementType, v);}    
   }
 
     

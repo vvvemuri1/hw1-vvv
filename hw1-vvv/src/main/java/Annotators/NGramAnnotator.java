@@ -24,63 +24,82 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
     
     while(tokenIter.hasNext())
     {
-      QAToken qaToken = (QAToken) tokenIter.next();
-      
-      // Unigram
-      NGram annotation = new NGram(jcas);
-      annotation.setBegin(qaToken.getBegin());
-      annotation.setEnd(qaToken.getEnd());
-      annotation.setConfidence(qaToken.getConfidence());
-      annotation.setCasProcessorId(NGramAnnotator.class.getName());
-      
-      int sentenceIndex = qaToken.getSentenceIndex();
-      FSArray elements = new FSArray(jcas,1);
-      elements.set(0, qaToken);
-      
-      annotation.setElements(elements);
-      annotation.addToIndexes();
-        
-      // Bigram
-      if (prevToken != null && 
-              sentenceIndex == prevToken.getSentenceIndex())
-      {
-        annotation = new NGram(jcas);
-        annotation.setBegin(prevToken.getBegin());
-        annotation.setEnd(qaToken.getEnd());
-        
-        annotation.setConfidence(qaToken.getConfidence());
-        annotation.setCasProcessorId(NGramAnnotator.class.getName());
-        
-        elements = new FSArray(jcas,2);
-        elements.set(0, prevToken);
-        elements.set(1, qaToken);
+      QAToken qaToken = (QAToken) tokenIter.next();      
 
-        annotation.setElements(elements);
-        annotation.addToIndexes();
-      }
-        
-      // Trigram
-      if (prevPrevToken != null && 
-              sentenceIndex == prevPrevToken.getSentenceIndex())
-      {
-        annotation = new NGram(jcas);
-        annotation.setBegin(prevPrevToken.getBegin());
-        annotation.setEnd(qaToken.getEnd());
-        
-        annotation.setConfidence(qaToken.getConfidence());
-        annotation.setCasProcessorId(NGramAnnotator.class.getName());
-        
-        elements = new FSArray(jcas,3);
-        elements.set(0, prevPrevToken);
-        elements.set(1, prevToken);
-        elements.set(2, qaToken);
-  
-        annotation.setElements(elements);
-        annotation.addToIndexes();
-      }
+      int sentenceIndex = setupUnigram(jcas, qaToken);
+      setupBigram(jcas, prevToken, qaToken, sentenceIndex);
+      setupTrigram(jcas, prevPrevToken, prevToken, qaToken, sentenceIndex);
         
       prevPrevToken = prevToken;
       prevToken = qaToken;
+    }
+  }
+
+  private int setupUnigram(JCas jcas, QAToken qaToken) 
+  {
+    NGram annotation = new NGram(jcas);
+    annotation.setBegin(qaToken.getBegin());
+    annotation.setEnd(qaToken.getEnd());
+    annotation.setConfidence(qaToken.getConfidence());
+    annotation.setCasProcessorId(NGramAnnotator.class.getName());
+    annotation.setElementType(qaToken.getClass().getName());
+    
+    int sentenceIndex = qaToken.getSentenceIndex();
+    FSArray elements = new FSArray(jcas,1);
+    elements.set(0, qaToken);
+    
+    annotation.setElements(elements);
+    annotation.addToIndexes();
+    return sentenceIndex;
+  }
+
+  private void setupBigram(JCas jcas, QAToken prevToken, QAToken qaToken, int sentenceIndex)
+  {
+    NGram annotation;
+    FSArray elements;
+    if (prevToken != null && 
+            sentenceIndex == prevToken.getSentenceIndex())
+    {
+      annotation = new NGram(jcas);
+      annotation.setBegin(prevToken.getBegin());
+      annotation.setEnd(qaToken.getEnd());
+      
+      annotation.setConfidence(qaToken.getConfidence());
+      annotation.setCasProcessorId(NGramAnnotator.class.getName());
+      annotation.setElementType(qaToken.getClass().getName());
+      
+      elements = new FSArray(jcas,2);
+      elements.set(0, prevToken);
+      elements.set(1, qaToken);
+
+      annotation.setElements(elements);
+      annotation.addToIndexes();
+    }
+  }
+  
+  private void setupTrigram(JCas jcas, QAToken prevPrevToken, QAToken prevToken, QAToken qaToken,
+          int sentenceIndex) 
+  {
+    NGram annotation;
+    FSArray elements;
+    if (prevPrevToken != null && 
+            sentenceIndex == prevPrevToken.getSentenceIndex())
+    {
+      annotation = new NGram(jcas);
+      annotation.setBegin(prevPrevToken.getBegin());
+      annotation.setEnd(qaToken.getEnd());
+      
+      annotation.setConfidence(qaToken.getConfidence());
+      annotation.setCasProcessorId(NGramAnnotator.class.getName());
+      annotation.setElementType(qaToken.getClass().getName());
+      
+      elements = new FSArray(jcas,3);
+      elements.set(0, prevPrevToken);
+      elements.set(1, prevToken);
+      elements.set(2, qaToken);
+ 
+      annotation.setElements(elements);
+      annotation.addToIndexes();
     }
   }
 }

@@ -28,6 +28,11 @@
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
               <elementType>Types.Processed.QAToken</elementType>
             </featureDescription>
+          <featureDescription>
+              <name>elementType</name>
+              <description>Type of the Objects stored in 'elements' array.</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+            </featureDescription>
           </features>
         </typeDescription>
       <typeDescription>
