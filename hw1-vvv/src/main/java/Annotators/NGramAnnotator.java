@@ -38,6 +38,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
         NGram annotation = new NGram(jcas);
         annotation.setBegin(begin);
         annotation.setEnd(end);
+        annotation.setConfidence(questionAnswer.getConfidence());
+        annotation.setCasProcessorId(NGramAnnotator.class.getName());
         annotation.addToIndexes();
         
         // Bigram
@@ -46,6 +48,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
           annotation = new NGram(jcas);
           annotation.setBegin(prevBegin);
           annotation.setEnd(end);
+          annotation.setConfidence(questionAnswer.getConfidence());
+          annotation.setCasProcessorId(NGramAnnotator.class.getName());
           annotation.addToIndexes();
         }
         
@@ -55,6 +59,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
           annotation = new NGram(jcas);
           annotation.setBegin(prevPrevBegin);
           annotation.setEnd(end);
+          annotation.setConfidence(questionAnswer.getConfidence());
+          annotation.setCasProcessorId(NGramAnnotator.class.getName());
           annotation.addToIndexes();
         }
         

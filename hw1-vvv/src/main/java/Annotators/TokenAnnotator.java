@@ -32,6 +32,8 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
         end = begin + st.nextToken().length();
         annotation.setBegin(begin);
         annotation.setEnd(end);
+        annotation.setConfidence(questionAnswer.getConfidence());
+        annotation.setCasProcessorId(TokenAnnotator.class.getName());
         annotation.addToIndexes();
         begin = end + 1;
       }
