@@ -8,18 +8,15 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
+import Types.BaseAnnotation;
+
 import Types.TestElement.Answer;
-import Types.AbstractAnnotation;
-
-
-import org.apache.uima.jcas.tcas.Annotation;
-
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
+ * Updated by JCasGen Mon Sep 09 12:23:39 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
  * @generated */
-public class NGram extends AbstractAnnotation {
+public class NGram extends BaseAnnotation {
   /** @generated
    * @ordered 
    */
@@ -90,7 +87,7 @@ public class NGram extends AbstractAnnotation {
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
     return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i)));}
 
-  /** indexed setter for elements - sets an indexed value - 
+  /** indexed setter for elements - sets an indexed value - Tokens in NGram.
    * @generated */
   public void setElements(int i, Answer v) { 
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)

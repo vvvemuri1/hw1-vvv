@@ -37,10 +37,10 @@
       <typeDescription>
           <name>Types.TestElement.QuestionAnswer</name>
           <description/>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <supertypeName>Types.BaseAnnotation</supertypeName>
         </typeDescription>
       <typeDescription>
-          <name>Types.AbstractAnnotation</name>
+          <name>Types.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>

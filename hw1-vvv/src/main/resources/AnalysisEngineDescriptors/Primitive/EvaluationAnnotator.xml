@@ -13,8 +13,8 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.AbstractAnnotation</name>
-          <description/>
+          <name>Types.BaseAnnotation</name>
+          <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
             <featureDescription>
@@ -32,7 +32,7 @@
       <typeDescription>
           <name>Types.TestElement.QuestionAnswer</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <supertypeName>Types.BaseAnnotation</supertypeName>
         </typeDescription>
         <typeDescription>
           <name>Types.TestElement.Answer</name>
@@ -54,7 +54,7 @@
       <typeDescription>
           <name>Types.Processed.Evaluation</name>
           <description>Evaluation of the answers to the question.</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <supertypeName>Types.BaseAnnotation</supertypeName>
           <features>
             <featureDescription>
               <name>SortedAnswers</name>

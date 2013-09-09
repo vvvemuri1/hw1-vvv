@@ -8,15 +8,14 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
+import Types.BaseAnnotation;
 import Types.TestElement.Answer;
-import Types.AbstractAnnotation;
-
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
+ * Updated by JCasGen Mon Sep 09 12:23:24 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
  * @generated */
-public class Evaluation extends AbstractAnnotation {
+public class Evaluation extends BaseAnnotation {
   /** @generated
    * @ordered 
    */

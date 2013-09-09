@@ -11,14 +11,14 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import Types.AbstractAnnotation_Type;
+import Types.BaseAnnotation_Type;
 
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
+ * Updated by JCasGen Mon Sep 09 12:24:08 EDT 2013
  * @generated */
-public class QAToken_Type extends AbstractAnnotation_Type {
+public class QAToken_Type extends BaseAnnotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}

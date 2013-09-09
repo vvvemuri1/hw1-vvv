@@ -14,7 +14,7 @@ an answer score annotation to each answer. The answer score annotation will reco
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.AbstractAnnotation</name>
+          <name>Types.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
           <features>
@@ -33,7 +33,7 @@ an answer score annotation to each answer. The answer score annotation will reco
         <typeDescription>
           <name>Types.TestElement.QuestionAnswer</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <supertypeName>Types.BaseAnnotation</supertypeName>
         </typeDescription>
         <typeDescription>
           <name>Types.TestElement.Question</name>

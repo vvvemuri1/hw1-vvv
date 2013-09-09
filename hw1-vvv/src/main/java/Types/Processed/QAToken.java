@@ -7,17 +7,16 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import Types.AbstractAnnotation;
-
+import Types.BaseAnnotation;
 
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/FullAnalysisEngine.xml
+ * Updated by JCasGen Mon Sep 09 12:24:08 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
-public class QAToken extends AbstractAnnotation {
+public class QAToken extends BaseAnnotation {
   /** @generated
    * @ordered 
    */

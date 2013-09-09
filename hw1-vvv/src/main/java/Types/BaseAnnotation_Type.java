@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sun Sep 08 22:52:08 EDT 2013 */
+/* First created by JCasGen Mon Sep 09 12:22:36 EDT 2013 */
 package Types;
 
 import org.apache.uima.jcas.JCas;
@@ -14,9 +14,9 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Common core attributes shared by all types.
- * Updated by JCasGen Mon Sep 09 12:15:48 EDT 2013
+ * Updated by JCasGen Mon Sep 09 12:24:08 EDT 2013
  * @generated */
-public class AbstractAnnotation_Type extends Annotation_Type {
+public class BaseAnnotation_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -24,25 +24,25 @@ public class AbstractAnnotation_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (AbstractAnnotation_Type.this.useExistingInstance) {
+  			 if (BaseAnnotation_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = AbstractAnnotation_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = BaseAnnotation_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new AbstractAnnotation(addr, AbstractAnnotation_Type.this);
-  			   AbstractAnnotation_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new BaseAnnotation(addr, BaseAnnotation_Type.this);
+  			   BaseAnnotation_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new AbstractAnnotation(addr, AbstractAnnotation_Type.this);
+        } else return new BaseAnnotation(addr, BaseAnnotation_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = AbstractAnnotation.typeIndexID;
+  public final static int typeIndexID = BaseAnnotation.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.AbstractAnnotation");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.BaseAnnotation");
  
   /** @generated */
   final Feature casFeat_casProcessorId;
@@ -51,13 +51,13 @@ public class AbstractAnnotation_Type extends Annotation_Type {
   /** @generated */ 
   public String getCasProcessorId(int addr) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "Types.AbstractAnnotation");
+      jcas.throwFeatMissing("casProcessorId", "Types.BaseAnnotation");
     return ll_cas.ll_getStringValue(addr, casFeatCode_casProcessorId);
   }
   /** @generated */    
   public void setCasProcessorId(int addr, String v) {
         if (featOkTst && casFeat_casProcessorId == null)
-      jcas.throwFeatMissing("casProcessorId", "Types.AbstractAnnotation");
+      jcas.throwFeatMissing("casProcessorId", "Types.BaseAnnotation");
     ll_cas.ll_setStringValue(addr, casFeatCode_casProcessorId, v);}
     
   
@@ -69,13 +69,13 @@ public class AbstractAnnotation_Type extends Annotation_Type {
   /** @generated */ 
   public float getConfidence(int addr) {
         if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Types.AbstractAnnotation");
+      jcas.throwFeatMissing("confidence", "Types.BaseAnnotation");
     return ll_cas.ll_getFloatValue(addr, casFeatCode_confidence);
   }
   /** @generated */    
   public void setConfidence(int addr, float v) {
         if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Types.AbstractAnnotation");
+      jcas.throwFeatMissing("confidence", "Types.BaseAnnotation");
     ll_cas.ll_setFloatValue(addr, casFeatCode_confidence, v);}
     
   
@@ -84,7 +84,7 @@ public class AbstractAnnotation_Type extends Annotation_Type {
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public AbstractAnnotation_Type(JCas jcas, Type casType) {
+  public BaseAnnotation_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

@@ -31,7 +31,7 @@
     <typeDescription>
       <name>Types.Processed.QAToken</name>
       <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-      <supertypeName>Types.AbstractAnnotation</supertypeName>
+      <supertypeName>Types.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
           <name>sentenceIndex</name>
@@ -43,7 +43,7 @@
     <typeDescription>
       <name>Types.Processed.NGram</name>
       <description>Type representing unigram, bigram or trigram in question/answer.</description>
-      <supertypeName>Types.AbstractAnnotation</supertypeName>
+      <supertypeName>Types.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
           <name>elements</name>
@@ -61,10 +61,10 @@
     <typeDescription>
       <name>Types.TestElement.QuestionAnswer</name>
       <description>SuperType of Question and Answer.</description>
-      <supertypeName>Types.AbstractAnnotation</supertypeName>
+      <supertypeName>Types.BaseAnnotation</supertypeName>
     </typeDescription>
   <typeDescription>
-      <name>Types.AbstractAnnotation</name>
+      <name>Types.BaseAnnotation</name>
       <description>Common core attributes shared by all types.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -83,7 +83,7 @@
   <typeDescription>
       <name>Types.Processed.Evaluation</name>
       <description>Evaluation of the answers to the question.</description>
-      <supertypeName>Types.AbstractAnnotation</supertypeName>
+      <supertypeName>Types.BaseAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>SortedAnswers</name>
@@ -93,8 +93,7 @@
         </featureDescription>
         <featureDescription>
           <name>Precision</name>
-          <description>Average Precision of the answers to the question (#correct / #predicted).
-</description>
+          <description>Average Precision of the answers to the question (#correct / #predicted).</description>
           <rangeTypeName>uima.cas.Float</rangeTypeName>
         </featureDescription>
       </features>
