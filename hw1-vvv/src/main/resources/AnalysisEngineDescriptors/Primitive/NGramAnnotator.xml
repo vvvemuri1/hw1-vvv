@@ -13,7 +13,7 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.TestElement.QuestionAnswer</name>
+          <name>Types.TestElement.Sentence</name>
           <description>SuperType of Question and Answer.</description>
           <supertypeName>Types.BaseAnnotation</supertypeName>
         </typeDescription>
@@ -37,7 +37,7 @@
       <typeDescription>
           <name>Types.TestElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
-          <supertypeName>Types.TestElement.QuestionAnswer</supertypeName>
+          <supertypeName>Types.TestElement.Sentence</supertypeName>
           <features>
             <featureDescription>
               <name>IsCorrect</name>
@@ -75,7 +75,7 @@
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.QuestionAnswer</type>
+          <type allAnnotatorFeatures="true">Types.TestElement.Sentence</type>
         </inputs>
         <outputs/>
         <languagesSupported/>

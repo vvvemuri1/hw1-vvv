@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sun Sep 08 20:53:03 EDT 2013 */
+/* First created by JCasGen Mon Sep 09 12:44:53 EDT 2013 */
 package Types.TestElement;
 
 import org.apache.uima.jcas.JCas;
@@ -11,14 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import Types.BaseAnnotation_Type;
 
-import org.apache.uima.cas.impl.FeatureImpl;
-import org.apache.uima.cas.Feature;
-import org.apache.uima.jcas.tcas.Annotation_Type;
-
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 12:24:08 EDT 2013
+ * Updated by JCasGen Mon Sep 09 12:49:25 EDT 2013
  * @generated */
-public class QuestionAnswer_Type extends BaseAnnotation_Type {
+public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -26,31 +22,31 @@ public class QuestionAnswer_Type extends BaseAnnotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (QuestionAnswer_Type.this.useExistingInstance) {
+  			 if (Sentence_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = QuestionAnswer_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Sentence_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new QuestionAnswer(addr, QuestionAnswer_Type.this);
-  			   QuestionAnswer_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Sentence(addr, Sentence_Type.this);
+  			   Sentence_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new QuestionAnswer(addr, QuestionAnswer_Type.this);
+        } else return new Sentence(addr, Sentence_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = QuestionAnswer.typeIndexID;
+  public final static int typeIndexID = Sentence.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.TestElement.QuestionAnswer");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.TestElement.Sentence");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public QuestionAnswer_Type(JCas jcas, Type casType) {
+  public Sentence_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

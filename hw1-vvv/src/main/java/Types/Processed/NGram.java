@@ -13,7 +13,7 @@ import Types.BaseAnnotation;
 import Types.TestElement.Answer;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 12:23:39 EDT 2013
+ * Updated by JCasGen Mon Sep 09 12:48:42 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
  * @generated */
 public class NGram extends BaseAnnotation {

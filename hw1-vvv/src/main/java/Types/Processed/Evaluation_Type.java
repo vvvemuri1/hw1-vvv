@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import Types.BaseAnnotation_Type;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Mon Sep 09 12:23:24 EDT 2013
+ * Updated by JCasGen Mon Sep 09 12:48:24 EDT 2013
  * @generated */
 public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */
