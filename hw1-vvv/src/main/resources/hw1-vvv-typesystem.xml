@@ -30,7 +30,7 @@
     </typeDescription>
     <typeDescription>
       <name>Types.Processed.NGram</name>
-      <description>1-gram in question/answer.</description>
+      <description>Type representing unigram, bigram or trigram in question/answer.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>

@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Sun Sep 08 20:54:31 EDT 2013
+ * Updated by JCasGen Sun Sep 08 21:28:28 EDT 2013
  * @generated */
 public class QAToken_Type extends Annotation_Type {
   /** @generated */

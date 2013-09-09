@@ -2,10 +2,10 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>Annotators.TokenAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>Annotators.NGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>TokenAnnotator</name>
-    <description>The system will annotate each token span in each question and answer (break on whitespace and punctuation).</description>
+    <name>NGramAnnotator</name>
+    <description>The system will annotate 1-,2- and 3-grams of consecutive tokens.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -17,9 +17,9 @@
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
-      <typeDescription>
-          <name>Types.TestElement.QuestionAnswer</name>
-          <description>SuperType of Question and Answer.</description>
+        <typeDescription>
+          <name>Types.Processed.NGram</name>
+          <description>Type representing unigram, bigram or trigram in question/answer.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
       </types>
@@ -28,10 +28,10 @@
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.QuestionAnswer</type>
+          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.NGram</type>
         </outputs>
         <languagesSupported/>
       </capability>

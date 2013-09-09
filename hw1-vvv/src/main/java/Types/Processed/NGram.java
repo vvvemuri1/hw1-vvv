@@ -10,9 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 1-gram in question/answer.
- * Updated by JCasGen Sun Sep 08 20:53:02 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+/** Type representing unigram, bigram or trigram in question/answer.
+ * Updated by JCasGen Sun Sep 08 21:28:28 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TestElementAndNGram.xml
  * @generated */
 public class NGram extends Annotation {
   /** @generated

@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 20:54:31 EDT 2013
+ * Updated by JCasGen Sun Sep 08 21:28:28 EDT 2013
  * @generated */
 public class Question_Type extends QuestionAnswer_Type {
   /** @generated */

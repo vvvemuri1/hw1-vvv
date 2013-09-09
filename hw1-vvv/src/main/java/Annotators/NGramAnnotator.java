@@ -8,11 +8,11 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import Types.Processed.QAToken;
+import Types.Processed.NGram;
 import Types.TestElement.QuestionAnswer;
 
-public class TokenAnnotator extends JCasAnnotator_ImplBase 
-{
+public class NGramAnnotator extends JCasAnnotator_ImplBase 
+{  
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException 
   {
@@ -25,14 +25,41 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
       
       int begin = questionAnswer.getBegin();
       int end = begin;
-              
+      
+      int prevPrevBegin = -1;
+      int prevBegin = -1;
+      
       while (st.hasMoreTokens())
       {
-        QAToken annotation = new QAToken(jcas);
-        end = begin + st.nextToken().length();
+        String current = st.nextToken();
+        end = begin + current.length();
+        
+        // Unigram
+        NGram annotation = new NGram(jcas);
         annotation.setBegin(begin);
         annotation.setEnd(end);
         annotation.addToIndexes();
+        
+        // Bigram
+        if (prevBegin != -1)
+        {
+          annotation = new NGram(jcas);
+          annotation.setBegin(prevBegin);
+          annotation.setEnd(end);
+          annotation.addToIndexes();
+        }
+        
+        // Trigram
+        if (prevPrevBegin != -1)
+        {
+          annotation = new NGram(jcas);
+          annotation.setBegin(prevPrevBegin);
+          annotation.setEnd(end);
+          annotation.addToIndexes();
+        }
+        
+        prevPrevBegin = prevBegin;
+        prevBegin = begin;
         begin = end + 1;
       }
     }
