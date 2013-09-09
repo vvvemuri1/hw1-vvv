@@ -7,6 +7,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
+import org.apache.uima.jcas.cas.FSArray;
 import Types.AbstractAnnotation;
 
 
@@ -14,7 +15,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Sun Sep 08 22:52:37 EDT 2013
+ * Updated by JCasGen Mon Sep 09 01:10:39 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/NGramAnnotator.xml
  * @generated */
 public class NGram extends AbstractAnnotation {
@@ -63,6 +64,38 @@ public class NGram extends AbstractAnnotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: elements
+
+  /** getter for elements - gets Tokens in NGram.
+   * @generated */
+  public FSArray getElements() {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
+      jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements)));}
+    
+  /** setter for elements - sets Tokens in NGram. 
+   * @generated */
+  public void setElements(FSArray v) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
+      jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    jcasType.ll_cas.ll_setRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for elements - gets an indexed value - Tokens in NGram.
+   * @generated */
+  public QAToken getElements(int i) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
+      jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
+    return (QAToken)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i)));}
+
+  /** indexed setter for elements - sets an indexed value - Tokens in NGram.
+   * @generated */
+  public void setElements(int i, QAToken v) { 
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
+      jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i, jcasType.ll_cas.ll_getFSRef(v));}
+  }
 
     

@@ -9,12 +9,14 @@ import org.apache.uima.cas.impl.FSGenerator;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
+import org.apache.uima.cas.impl.FeatureImpl;
+import org.apache.uima.cas.Feature;
 import Types.AbstractAnnotation_Type;
 
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Sun Sep 08 22:52:37 EDT 2013
+ * Updated by JCasGen Mon Sep 09 01:10:39 EDT 2013
  * @generated */
 public class NGram_Type extends AbstractAnnotation_Type {
   /** @generated */
@@ -46,11 +48,54 @@ public class NGram_Type extends AbstractAnnotation_Type {
 
 
 
+  /** @generated */
+  final Feature casFeat_elements;
+  /** @generated */
+  final int     casFeatCode_elements;
+  /** @generated */ 
+  public int getElements(int addr) {
+        if (featOkTst && casFeat_elements == null)
+      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_elements);
+  }
+  /** @generated */    
+  public void setElements(int addr, int v) {
+        if (featOkTst && casFeat_elements == null)
+      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    ll_cas.ll_setRefValue(addr, casFeatCode_elements, v);}
+    
+   /** @generated */
+  public int getElements(int addr, int i) {
+        if (featOkTst && casFeat_elements == null)
+      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    if (lowLevelTypeChecks)
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
+  }
+   
+  /** @generated */ 
+  public void setElements(int addr, int i, int v) {
+        if (featOkTst && casFeat_elements == null)
+      jcas.throwFeatMissing("elements", "Types.Processed.NGram");
+    if (lowLevelTypeChecks)
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v);
+  }
+ 
+
+
+
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
   public NGram_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
+
+ 
+    casFeat_elements = jcas.getRequiredFeatureDE(casType, "elements", "uima.cas.FSArray", featOkTst);
+    casFeatCode_elements  = (null == casFeat_elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elements).getCode();
 
   }
 }

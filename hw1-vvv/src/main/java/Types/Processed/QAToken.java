@@ -14,8 +14,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Sun Sep 08 22:52:37 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/NGramAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 01:11:23 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/TokenAnnotator.xml
  * @generated */
 public class QAToken extends AbstractAnnotation {
   /** @generated
@@ -63,6 +63,22 @@ public class QAToken extends AbstractAnnotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: sentenceIndex
+
+  /** getter for sentenceIndex - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
+   * @generated */
+  public int getSentenceIndex() {
+    if (QAToken_Type.featOkTst && ((QAToken_Type)jcasType).casFeat_sentenceIndex == null)
+      jcasType.jcas.throwFeatMissing("sentenceIndex", "Types.Processed.QAToken");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((QAToken_Type)jcasType).casFeatCode_sentenceIndex);}
+    
+  /** setter for sentenceIndex - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
+   * @generated */
+  public void setSentenceIndex(int v) {
+    if (QAToken_Type.featOkTst && ((QAToken_Type)jcasType).casFeat_sentenceIndex == null)
+      jcasType.jcas.throwFeatMissing("sentenceIndex", "Types.Processed.QAToken");
+    jcasType.ll_cas.ll_setIntValue(addr, ((QAToken_Type)jcasType).casFeatCode_sentenceIndex, v);}    
+  }
 
     

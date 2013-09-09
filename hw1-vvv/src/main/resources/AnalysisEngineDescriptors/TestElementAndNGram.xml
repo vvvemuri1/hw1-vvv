@@ -10,6 +10,9 @@
     <delegateAnalysisEngine key="NGramAnnotator">
       <import name="AnalysisEngineDescriptors.NGramAnnotator"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="TokenAnnotator">
+      <import name="AnalysisEngineDescriptors.TokenAnnotator"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>TestElementAndNGram</name>
@@ -21,7 +24,8 @@
     <flowConstraints>
       <fixedFlow>
         <node>TestElementAnnotator</node>
-        <node>NGramAnnotator</node>
+        <node>TokenAnnotator</node>
+      <node>NGramAnnotator</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>

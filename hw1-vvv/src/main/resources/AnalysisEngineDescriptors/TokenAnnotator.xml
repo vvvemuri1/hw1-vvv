@@ -15,15 +15,22 @@
         <typeDescription>
           <name>Types.Processed.QAToken</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>AbstractAnnotation</supertypeName>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
+        <features>
+            <featureDescription>
+              <name>sentenceIndex</name>
+              <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
+              <rangeTypeName>uima.cas.Integer</rangeTypeName>
+            </featureDescription>
+          </features>
         </typeDescription>
       <typeDescription>
           <name>Types.TestElement.QuestionAnswer</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>AbstractAnnotation</supertypeName>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
         </typeDescription>
       <typeDescription>
-          <name>AbstractAnnotation</name>
+          <name>Types.AbstractAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>

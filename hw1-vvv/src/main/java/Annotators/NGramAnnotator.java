@@ -1,73 +1,86 @@
 package Annotators;
 
 import java.util.Iterator;
-import java.util.StringTokenizer;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
 
 import Types.Processed.NGram;
-import Types.TestElement.QuestionAnswer;
+import Types.Processed.QAToken;
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase 
 {  
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException 
   {
-    FSIndex qaIndex = jcas.getAnnotationIndex(QuestionAnswer.type);
-    Iterator qaIter = qaIndex.iterator();
-    while(qaIter.hasNext())
+    FSIndex tokenIndex = jcas.getAnnotationIndex(QAToken.type);
+    Iterator tokenIter = tokenIndex.iterator();
+    
+    QAToken prevPrevToken = null;
+    QAToken prevToken = null;
+    
+    while(tokenIter.hasNext())
     {
-      QuestionAnswer questionAnswer = (QuestionAnswer) qaIter.next();
-      StringTokenizer st = new StringTokenizer(questionAnswer.getCoveredText()," ?.");
+      QAToken qaToken = (QAToken) tokenIter.next();
       
-      int begin = questionAnswer.getBegin();
-      int end = begin;
+      // Unigram
+      NGram annotation = new NGram(jcas);
+      annotation.setBegin(qaToken.getBegin());
+      annotation.setEnd(qaToken.getEnd());
+      annotation.setConfidence(qaToken.getConfidence());
+      annotation.setCasProcessorId(NGramAnnotator.class.getName());
       
-      int prevPrevBegin = -1;
-      int prevBegin = -1;
+      int sentenceIndex = qaToken.getSentenceIndex();
+      FSArray elements = new FSArray(jcas,1);
+      elements.set(0, qaToken);
       
-      while (st.hasMoreTokens())
+      annotation.setElements(elements);
+      annotation.addToIndexes();
+        
+      // Bigram
+      if (prevToken != null && 
+              sentenceIndex == prevToken.getSentenceIndex())
       {
-        String current = st.nextToken();
-        end = begin + current.length();
+        annotation = new NGram(jcas);
+        annotation.setBegin(prevToken.getBegin());
+        annotation.setEnd(qaToken.getEnd());
         
-        // Unigram
-        NGram annotation = new NGram(jcas);
-        annotation.setBegin(begin);
-        annotation.setEnd(end);
-        annotation.setConfidence(questionAnswer.getConfidence());
+        annotation.setConfidence(qaToken.getConfidence());
         annotation.setCasProcessorId(NGramAnnotator.class.getName());
+        
+        elements = new FSArray(jcas,2);
+        elements.set(0, prevToken);
+        elements.set(1, qaToken);
+
+        annotation.setElements(elements);
         annotation.addToIndexes();
-        
-        // Bigram
-        if (prevBegin != -1)
-        {
-          annotation = new NGram(jcas);
-          annotation.setBegin(prevBegin);
-          annotation.setEnd(end);
-          annotation.setConfidence(questionAnswer.getConfidence());
-          annotation.setCasProcessorId(NGramAnnotator.class.getName());
-          annotation.addToIndexes();
-        }
-        
-        // Trigram
-        if (prevPrevBegin != -1)
-        {
-          annotation = new NGram(jcas);
-          annotation.setBegin(prevPrevBegin);
-          annotation.setEnd(end);
-          annotation.setConfidence(questionAnswer.getConfidence());
-          annotation.setCasProcessorId(NGramAnnotator.class.getName());
-          annotation.addToIndexes();
-        }
-        
-        prevPrevBegin = prevBegin;
-        prevBegin = begin;
-        begin = end + 1;
       }
+        
+      // Trigram
+      if (prevPrevToken != null && 
+              sentenceIndex == prevPrevToken.getSentenceIndex())
+      {
+        annotation = new NGram(jcas);
+        annotation.setBegin(prevPrevToken.getBegin());
+        annotation.setEnd(qaToken.getEnd());
+        
+        annotation.setConfidence(qaToken.getConfidence());
+        annotation.setCasProcessorId(NGramAnnotator.class.getName());
+        
+        elements = new FSArray(jcas,3);
+        elements.set(0, prevPrevToken);
+        elements.set(1, prevToken);
+        elements.set(2, qaToken);
+  
+        annotation.setElements(elements);
+        annotation.addToIndexes();
+      }
+        
+      prevPrevToken = prevToken;
+      prevToken = qaToken;
     }
   }
 }

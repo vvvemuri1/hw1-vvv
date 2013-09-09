@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Sun Sep 08 22:53:02 EDT 2013
+ * Updated by JCasGen Mon Sep 09 01:09:15 EDT 2013
  * @generated */
 public class Answer_Type extends QuestionAnswer_Type {
   /** @generated */

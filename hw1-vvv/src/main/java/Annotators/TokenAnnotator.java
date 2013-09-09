@@ -18,6 +18,8 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
   {
     FSIndex qaIndex = jcas.getAnnotationIndex(QuestionAnswer.type);
     Iterator qaIter = qaIndex.iterator();
+    int sentenceIndex = 0;
+    
     while(qaIter.hasNext())
     {
       QuestionAnswer questionAnswer = (QuestionAnswer) qaIter.next();
@@ -34,9 +36,12 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
         annotation.setEnd(end);
         annotation.setConfidence(questionAnswer.getConfidence());
         annotation.setCasProcessorId(TokenAnnotator.class.getName());
+        annotation.setSentenceIndex(sentenceIndex);
         annotation.addToIndexes();
         begin = end + 1;
       }
+      
+      sentenceIndex++;
     }
   }
 }
