@@ -6,7 +6,6 @@ import java.util.Iterator;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
-import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
@@ -21,13 +20,26 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase
     FSIndex answerIndex = jcas.getAnnotationIndex(Answer.type);
     Iterator answerIter = answerIndex.iterator();
     
+    int answerStart = 0;
+    int answerEnd = 0;
+    
     int correct = 0;
     int i = 0;
     FSArray answers = new FSArray(jcas, answerIndex.size());   
     while(answerIter.hasNext())
     {
       Answer answer = (Answer) answerIter.next();
-      answers.set(i++, (FeatureStructure) answer);
+      
+      if (i == 0)
+      {
+        answerStart = answer.getBegin();
+      }
+      else if (!answerIter.hasNext())
+      {
+        answerEnd = answer.getEnd();
+      }
+      
+      answers.set(i, answer);
       if (answer.getIsCorrect())
       {
         correct++;
@@ -35,15 +47,17 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase
     }
     
     Evaluation annotation = new Evaluation(jcas);
+    annotation.setBegin(answerStart);
+    annotation.setEnd(answerEnd);
     annotation.setCasProcessorId(EvaluationAnnotator.class.getName());
     
     // Sort answers
-    Arrays.sort(answers.toArray());
-    annotation.setSortedAnswers(answers);
+    //Arrays.sort(answers.toArray());
+    //annotation.setSortedAnswers(answers);
 
     // Compute Precision
-    float precision = correct/(answers.size());
-    annotation.setPrecision(precision);
+    //float precision = correct/(answers.size());
+    //annotation.setPrecision(precision);
     
     annotation.addToIndexes();
   }

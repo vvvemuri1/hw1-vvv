@@ -7,13 +7,16 @@
     <delegateAnalysisEngine key="TestElementAnnotator">
       <import name="AnalysisEngineDescriptors.Primitive.TestElementAnnotator"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="TokenAnnotator">
-      <import name="AnalysisEngineDescriptors.Primitive.TokenAnnotator"/>
+    <delegateAnalysisEngine key="AnswerScoringAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.AnswerScoringAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="EvaluationAnnotator">
+      <import name="AnalysisEngineDescriptors.Primitive.EvaluationAnnotator"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
-    <name>TestElementAndToken</name>
-    <description>Aggregate Analysis Engine that combines TestElementAnnotator and TokenAnnotator.</description>
+    <name>TestElementAndEvaluation</name>
+    <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters searchStrategy="language_fallback"/>
@@ -21,7 +24,8 @@
     <flowConstraints>
       <fixedFlow>
         <node>TestElementAnnotator</node>
-        <node>TokenAnnotator</node>
+        <node>AnswerScoringAnnotator</node>
+        <node>EvaluationAnnotator</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
@@ -29,7 +33,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.QAToken</type>
+          <type allAnnotatorFeatures="true">Types.Processed.Evaluation</type>
         </outputs>
         <languagesSupported/>
       </capability>

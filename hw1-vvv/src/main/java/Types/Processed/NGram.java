@@ -8,6 +8,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
+import Types.TestElement.Answer;
 import Types.AbstractAnnotation;
 
 
@@ -15,8 +16,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Mon Sep 09 10:23:04 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Mon Sep 09 11:18:27 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
  * @generated */
 public class NGram extends AbstractAnnotation {
   /** @generated
@@ -81,17 +82,17 @@ public class NGram extends AbstractAnnotation {
       jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
     jcasType.ll_cas.ll_setRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements, jcasType.ll_cas.ll_getFSRef(v));}    
     
-  /** indexed getter for elements - gets an indexed value - Tokens in NGram.
+  /** indexed getter for elements - gets an indexed value - 
    * @generated */
-  public QAToken getElements(int i) {
+  public Answer getElements(int i) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
       jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
-    return (QAToken)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i)));}
+    return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i)));}
 
-  /** indexed setter for elements - sets an indexed value - Tokens in NGram.
+  /** indexed setter for elements - sets an indexed value - 
    * @generated */
-  public void setElements(int i, QAToken v) { 
+  public void setElements(int i, Answer v) { 
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
       jcasType.jcas.throwFeatMissing("elements", "Types.Processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);

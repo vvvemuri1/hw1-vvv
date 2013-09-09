@@ -8,10 +8,10 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import Types.AbstractAnnotation;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 10:29:11 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
+ * Updated by JCasGen Mon Sep 09 11:23:35 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Aggregate/TestElementAndEvaluation.xml
  * @generated */
-public class Answer extends QuestionAnswer {
+public class Answer extends QuestionAnswer implements Comparable {
   /** @generated
    * @ordered 
    */
@@ -90,10 +90,16 @@ public class Answer extends QuestionAnswer {
   public void setScore(float v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "Types.TestElement.Answer");
-    jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}      
+    jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_score, v);}    
 
-  public int compare(Answer answer)
+  @Override
+  public int compareTo(Object obj) 
   {
+    System.out.println("obj: " + obj);
+    Answer answer = (Answer) obj; 
+    System.out.println("Answer: " + answer);
+    System.out.println("Answer Score1: " + getScore());
+    System.out.println("Answer Score1: " + answer.getScore());
     return (int)(getScore() - answer.getScore());
   }
 }

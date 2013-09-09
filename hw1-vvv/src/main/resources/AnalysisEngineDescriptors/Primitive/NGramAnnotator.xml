@@ -51,6 +51,24 @@
             </featureDescription>
           </features>
         </typeDescription>
+      <typeDescription>
+          <name>Types.Processed.NGram</name>
+          <description>Type representing unigram, bigram or trigram in question/answer.</description>
+          <supertypeName>Types.AbstractAnnotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>elements</name>
+              <description>Tokens in NGram.</description>
+              <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+              <elementType>Types.TestElement.Answer</elementType>
+            </featureDescription>
+            <featureDescription>
+              <name>elementType</name>
+              <description>Type of the Objects stored in 'elements' array.</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+            </featureDescription>
+          </features>
+        </typeDescription>
       </types>
     </typeSystemDescription>
     <fsIndexCollection/>

@@ -5,10 +5,10 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="TestElementAnnotator">
-      <import name="AnalysisEngineDescriptors.TestElementAnnotator"/>
+      <import name="AnalysisEngineDescriptors.Primitive.TestElementAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="AnswerScoringAnnotator">
-      <import name="AnalysisEngineDescriptors.AnswerScoringAnnotator"/>
+      <import name="AnalysisEngineDescriptors.Primitive.AnswerScoringAnnotator"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>

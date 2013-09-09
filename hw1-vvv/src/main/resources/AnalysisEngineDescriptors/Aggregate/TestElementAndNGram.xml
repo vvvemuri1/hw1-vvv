@@ -5,13 +5,13 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="TestElementAnnotator">
-      <import name="AnalysisEngineDescriptors.TestElementAnnotator"/>
+      <import name="AnalysisEngineDescriptors.Primitive.TestElementAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="NGramAnnotator">
-      <import name="AnalysisEngineDescriptors.NGramAnnotator"/>
+      <import name="AnalysisEngineDescriptors.Primitive.NGramAnnotator"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="TokenAnnotator">
-      <import name="AnalysisEngineDescriptors.TokenAnnotator"/>
+      <import name="AnalysisEngineDescriptors.Primitive.TokenAnnotator"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
