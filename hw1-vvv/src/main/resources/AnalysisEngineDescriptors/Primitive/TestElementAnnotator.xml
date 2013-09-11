@@ -13,14 +13,14 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>edu.cmu.lti.types.TestElement.Question</name>
+          <name>edu.cmu.lti.types.testElement.Question</name>
           <description>Question being asked in sample information processing task.</description>
-          <supertypeName>edu.cmu.lti.types.TestElement.Sentence</supertypeName>
+          <supertypeName>edu.cmu.lti.types.testElement.Sentence</supertypeName>
         </typeDescription>
         <typeDescription>
-          <name>edu.cmu.lti.types.TestElement.Answer</name>
+          <name>edu.cmu.lti.types.testElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
-          <supertypeName>edu.cmu.lti.types.TestElement.Sentence</supertypeName>
+          <supertypeName>edu.cmu.lti.types.testElement.Sentence</supertypeName>
           <features>
             <featureDescription>
               <name>IsCorrect</name>
@@ -35,9 +35,9 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>edu.cmu.lti.types.TestElement.Sentence</name>
+          <name>edu.cmu.lti.types.testElement.Sentence</name>
           <description>Super Type of Question and Answer.</description>
-          <supertypeName>edu.cmu.lti.types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>Id</name>
@@ -48,12 +48,12 @@
               <name>TokenList</name>
               <description>List of tokens in sentence.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>edu.cmu.lti.types.Processed.Token</elementType>
+              <elementType>edu.cmu.lti.types.processed.Token</elementType>
             </featureDescription>
           </features>
         </typeDescription>
       <typeDescription>
-          <name>edu.cmu.lti.types.Base.BaseAnnotation</name>
+          <name>edu.cmu.lti.types.base.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
@@ -70,9 +70,9 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>edu.cmu.lti.types.Processed.Token</name>
+          <name>edu.cmu.lti.types.processed.Token</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>edu.cmu.lti.types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
           <features>
             <featureDescription>
               <name>SentenceId</name>
@@ -99,9 +99,9 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.lti.types.TestElement.Question</type>
-          <type>edu.cmu.lti.types.TestElement.Answer</type>
-          <feature>edu.cmu.lti.types.TestElement.Answer:IsCorrect</feature>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.testElement.Question</type>
+          <type>edu.cmu.lti.types.testElement.Answer</type>
+          <feature>edu.cmu.lti.types.testElement.Answer:IsCorrect</feature>
         </outputs>
         <languagesSupported/>
       </capability>

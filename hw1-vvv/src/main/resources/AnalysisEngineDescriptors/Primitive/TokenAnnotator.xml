@@ -13,9 +13,9 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>edu.cmu.lti.types.Processed.Token</name>
+          <name>edu.cmu.lti.types.processed.Token</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>edu.cmu.lti.types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>SentenceId</name>
@@ -35,9 +35,9 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>edu.cmu.lti.types.TestElement.Sentence</name>
+          <name>edu.cmu.lti.types.testElement.Sentence</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>edu.cmu.lti.types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>Id</name>
@@ -48,12 +48,12 @@
               <name>TokenList</name>
               <description>List of tokens in sentence.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>edu.cmu.lti.types.Processed.Token</elementType>
+              <elementType>edu.cmu.lti.types.processed.Token</elementType>
             </featureDescription>
           </features>
         </typeDescription>
       <typeDescription>
-          <name>edu.cmu.lti.types.Base.BaseAnnotation</name>
+          <name>edu.cmu.lti.types.base.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
@@ -75,10 +75,10 @@
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">edu.cmu.lti.types.TestElement.Sentence</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.testElement.Sentence</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.lti.types.Processed.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.Token</type>
         </outputs>
         <languagesSupported/>
       </capability>

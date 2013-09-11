@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import edu.cmu.lti.types.base.BaseAnnotation;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Tue Sep 10 22:50:26 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:56:34 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Token extends BaseAnnotation {
@@ -68,14 +68,14 @@ public class Token extends BaseAnnotation {
    * @generated */
   public int getSentenceId() {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_SentenceId == null)
-      jcasType.jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.processed.Token");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Token_Type)jcasType).casFeatCode_SentenceId);}
     
   /** setter for SentenceId - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
    * @generated */
   public void setSentenceId(int v) {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_SentenceId == null)
-      jcasType.jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.processed.Token");
     jcasType.ll_cas.ll_setIntValue(addr, ((Token_Type)jcasType).casFeatCode_SentenceId, v);}    
    
     
@@ -86,14 +86,14 @@ public class Token extends BaseAnnotation {
    * @generated */
   public String getPartOfSpeech() {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_PartOfSpeech == null)
-      jcasType.jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.processed.Token");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_PartOfSpeech);}
     
   /** setter for PartOfSpeech - sets Linguistic category of token. 
    * @generated */
   public void setPartOfSpeech(String v) {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_PartOfSpeech == null)
-      jcasType.jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.processed.Token");
     jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_PartOfSpeech, v);}    
    
     
@@ -104,13 +104,15 @@ public class Token extends BaseAnnotation {
    * @generated */
   public String getText() {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_Text == null)
-      jcasType.jcas.throwFeatMissing("Text", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("Text", "edu.cmu.lti.types.processed.Token");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_Text);}
     
   /** setter for Text - sets Text contained in token. 
    * @generated */
   public void setText(String v) {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_Text == null)
-      jcasType.jcas.throwFeatMissing("Text", "edu.cmu.lti.types.Processed.Token");
+      jcasType.jcas.throwFeatMissing("Text", "edu.cmu.lti.types.processed.Token");
     jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_Text, v);}    
   }
+
+    

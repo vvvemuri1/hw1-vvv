@@ -15,7 +15,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Tue Sep 10 22:50:26 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:56:34 EDT 2013
  * @generated */
 public class Token_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -43,7 +43,7 @@ public class Token_Type extends BaseAnnotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.Processed.Token");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.processed.Token");
  
   /** @generated */
   final Feature casFeat_SentenceId;
@@ -52,13 +52,13 @@ public class Token_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public int getSentenceId(int addr) {
         if (featOkTst && casFeat_SentenceId == null)
-      jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.processed.Token");
     return ll_cas.ll_getIntValue(addr, casFeatCode_SentenceId);
   }
   /** @generated */    
   public void setSentenceId(int addr, int v) {
         if (featOkTst && casFeat_SentenceId == null)
-      jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("SentenceId", "edu.cmu.lti.types.processed.Token");
     ll_cas.ll_setIntValue(addr, casFeatCode_SentenceId, v);}
     
   
@@ -70,13 +70,13 @@ public class Token_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public String getPartOfSpeech(int addr) {
         if (featOkTst && casFeat_PartOfSpeech == null)
-      jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.processed.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_PartOfSpeech);
   }
   /** @generated */    
   public void setPartOfSpeech(int addr, String v) {
         if (featOkTst && casFeat_PartOfSpeech == null)
-      jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("PartOfSpeech", "edu.cmu.lti.types.processed.Token");
     ll_cas.ll_setStringValue(addr, casFeatCode_PartOfSpeech, v);}
     
   
@@ -88,13 +88,13 @@ public class Token_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public String getText(int addr) {
         if (featOkTst && casFeat_Text == null)
-      jcas.throwFeatMissing("Text", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("Text", "edu.cmu.lti.types.processed.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_Text);
   }
   /** @generated */    
   public void setText(int addr, String v) {
         if (featOkTst && casFeat_Text == null)
-      jcas.throwFeatMissing("Text", "edu.cmu.lti.types.Processed.Token");
+      jcas.throwFeatMissing("Text", "edu.cmu.lti.types.processed.Token");
     ll_cas.ll_setStringValue(addr, casFeatCode_Text, v);}
     
   
@@ -122,3 +122,6 @@ public class Token_Type extends BaseAnnotation_Type {
   }
 }
 
+
+
+    

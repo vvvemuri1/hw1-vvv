@@ -15,7 +15,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Tue Sep 10 22:50:26 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:56:34 EDT 2013
  * @generated */
 public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -43,7 +43,7 @@ public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.TestElement.Sentence");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.testElement.Sentence");
  
   /** @generated */
   final Feature casFeat_Id;
@@ -52,13 +52,13 @@ public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public int getId(int addr) {
         if (featOkTst && casFeat_Id == null)
-      jcas.throwFeatMissing("Id", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("Id", "edu.cmu.lti.types.testElement.Sentence");
     return ll_cas.ll_getIntValue(addr, casFeatCode_Id);
   }
   /** @generated */    
   public void setId(int addr, int v) {
         if (featOkTst && casFeat_Id == null)
-      jcas.throwFeatMissing("Id", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("Id", "edu.cmu.lti.types.testElement.Sentence");
     ll_cas.ll_setIntValue(addr, casFeatCode_Id, v);}
     
   
@@ -70,19 +70,19 @@ public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public int getTokenList(int addr) {
         if (featOkTst && casFeat_TokenList == null)
-      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.testElement.Sentence");
     return ll_cas.ll_getRefValue(addr, casFeatCode_TokenList);
   }
   /** @generated */    
   public void setTokenList(int addr, int v) {
         if (featOkTst && casFeat_TokenList == null)
-      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.testElement.Sentence");
     ll_cas.ll_setRefValue(addr, casFeatCode_TokenList, v);}
     
    /** @generated */
   public int getTokenList(int addr, int i) {
         if (featOkTst && casFeat_TokenList == null)
-      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.testElement.Sentence");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_TokenList), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_TokenList), i);
@@ -92,7 +92,7 @@ public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public void setTokenList(int addr, int i, int v) {
         if (featOkTst && casFeat_TokenList == null)
-      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.TestElement.Sentence");
+      jcas.throwFeatMissing("TokenList", "edu.cmu.lti.types.testElement.Sentence");
     if (lowLevelTypeChecks)
       ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_TokenList), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_TokenList), i);
@@ -121,4 +121,4 @@ public class Sentence_Type extends BaseAnnotation_Type {
 
 
 
-
+    

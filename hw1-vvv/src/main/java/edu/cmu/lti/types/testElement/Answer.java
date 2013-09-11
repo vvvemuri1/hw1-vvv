@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Tue Sep 10 22:48:14 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:55:20 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TestElementAnnotator.xml
  * @generated */
 public class Answer extends Sentence {
@@ -68,14 +68,14 @@ public class Answer extends Sentence {
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_IsCorrect == null)
-      jcasType.jcas.throwFeatMissing("IsCorrect", "edu.cmu.lti.types.TestElement.Answer");
+      jcasType.jcas.throwFeatMissing("IsCorrect", "edu.cmu.lti.types.testElement.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_IsCorrect);}
     
   /** setter for IsCorrect - sets Boolean Flag indicating whether or not the proposed answer is correct. 
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_IsCorrect == null)
-      jcasType.jcas.throwFeatMissing("IsCorrect", "edu.cmu.lti.types.TestElement.Answer");
+      jcasType.jcas.throwFeatMissing("IsCorrect", "edu.cmu.lti.types.testElement.Answer");
     jcasType.ll_cas.ll_setBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_IsCorrect, v);}    
    
     
@@ -86,14 +86,14 @@ public class Answer extends Sentence {
    * @generated */
   public float getScore() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_Score == null)
-      jcasType.jcas.throwFeatMissing("Score", "edu.cmu.lti.types.TestElement.Answer");
+      jcasType.jcas.throwFeatMissing("Score", "edu.cmu.lti.types.testElement.Answer");
     return jcasType.ll_cas.ll_getFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_Score);}
     
   /** setter for Score - sets Answer score (assigned using Gold Answer Scoring System). 
    * @generated */
   public void setScore(float v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_Score == null)
-      jcasType.jcas.throwFeatMissing("Score", "edu.cmu.lti.types.TestElement.Answer");
+      jcasType.jcas.throwFeatMissing("Score", "edu.cmu.lti.types.testElement.Answer");
     jcasType.ll_cas.ll_setFloatValue(addr, ((Answer_Type)jcasType).casFeatCode_Score, v);}    
   }
 

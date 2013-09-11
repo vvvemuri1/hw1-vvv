@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** Question being asked in sample information processing task.
- * Updated by JCasGen Tue Sep 10 22:48:14 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:55:20 EDT 2013
  * @generated */
 public class Question_Type extends Sentence_Type {
   /** @generated */
@@ -39,7 +39,7 @@ public class Question_Type extends Sentence_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.TestElement.Question");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.testElement.Question");
 
 
 
