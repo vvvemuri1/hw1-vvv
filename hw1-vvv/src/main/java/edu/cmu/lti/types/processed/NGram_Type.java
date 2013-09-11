@@ -15,7 +15,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Tue Sep 10 22:45:05 EDT 2013
+ * Updated by JCasGen Wed Sep 11 09:54:05 EDT 2013
  * @generated */
 public class NGram_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -81,7 +81,9 @@ public class NGram_Type extends BaseAnnotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_Elements), i, v);
   }
  
- 
+
+
+
   /** @generated */
   final Feature casFeat_ElementType;
   /** @generated */
@@ -99,9 +101,7 @@ public class NGram_Type extends BaseAnnotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_ElementType, v);}
     
   
-
-
-
+ 
   /** initialize variables to correspond with Cas Type and Features
   * @generated */
   public NGram_Type(JCas jcas, Type casType) {
@@ -109,12 +109,12 @@ public class NGram_Type extends BaseAnnotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_Elements = jcas.getRequiredFeatureDE(casType, "Elements", "uima.cas.FSArray", featOkTst);
-    casFeatCode_Elements  = (null == casFeat_Elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Elements).getCode();
-
- 
     casFeat_ElementType = jcas.getRequiredFeatureDE(casType, "ElementType", "uima.cas.String", featOkTst);
     casFeatCode_ElementType  = (null == casFeat_ElementType) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_ElementType).getCode();
+
+ 
+    casFeat_Elements = jcas.getRequiredFeatureDE(casType, "Elements", "uima.cas.FSArray", featOkTst);
+    casFeatCode_Elements  = (null == casFeat_Elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Elements).getCode();
 
   }
 }

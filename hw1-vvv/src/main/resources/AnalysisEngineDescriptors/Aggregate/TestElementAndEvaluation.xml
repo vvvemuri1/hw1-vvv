@@ -33,7 +33,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.Evaluation</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.Evaluation</type>
         </outputs>
         <languagesSupported/>
       </capability>

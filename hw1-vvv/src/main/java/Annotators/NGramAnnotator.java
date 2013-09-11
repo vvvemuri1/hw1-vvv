@@ -71,7 +71,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase
       elements = new FSArray(jcas,2);
       elements.set(0, prevToken);
       elements.set(1, qaToken);
-
+      
       annotation.setElements(elements);
       annotation.addToIndexes();
     }

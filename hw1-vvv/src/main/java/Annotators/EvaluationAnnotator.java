@@ -56,7 +56,7 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase
     annotation.setSortedAnswers(answers);
 
     // Compute Precision
-    float precision = correct/(answers.size());
+    float precision = ((float)correct)/(answers.size());
     annotation.setPrecision(precision);
     
     annotation.addToIndexes();

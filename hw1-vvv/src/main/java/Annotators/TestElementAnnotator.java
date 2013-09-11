@@ -40,6 +40,33 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       annotation.setId(sentenceId++);
       annotation.addToIndexes();
       position = matcher.end();
+      
+      String question = annotation.getCoveredText();
+      StringTokenizer st = new StringTokenizer(question, " ?");
+      
+      FSArray tokens = new FSArray(jcas, st.countTokens());
+      int i = 0;
+      
+      int begin = annotation.getBegin();
+      int end = begin;
+              
+      while(st.hasMoreTokens())
+      {
+        String tokenString = st.nextToken();
+        end = begin + tokenString.length();
+        
+        Token token = new Token(jcas);
+        token.setBegin(begin);
+        token.setEnd(end);
+        token.setText(tokenString);
+        token.setSentenceId(sentenceId);
+        token.setCasProcessorId(TestElementAnnotator.class.getName());
+        tokens.set(i++, token);
+        
+        begin = end + 1;
+      }
+      
+      annotation.setTokenList(tokens);
     }
     
     // search for Answer(s)
@@ -111,6 +138,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
         token.setEnd(end);
         token.setText(tokenString);
         token.setSentenceId(sentenceId);
+        token.setCasProcessorId(TestElementAnnotator.class.getName());
         tokens.set(i++, token);
         
         begin = end + 1;

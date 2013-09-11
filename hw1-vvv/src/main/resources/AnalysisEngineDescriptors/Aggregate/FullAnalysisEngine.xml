@@ -41,11 +41,11 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.Question</type>
-          <type allAnnotatorFeatures="true">Types.Processed.NGram</type>
-          <type allAnnotatorFeatures="true">Types.Processed.Evaluation</type>
-          <type allAnnotatorFeatures="true">Types.TestElement.Answer</type>
-          <type allAnnotatorFeatures="true">Types.Processed.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.testElement.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.NGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.Evaluation</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.testElement.Answer</type>
         </outputs>
         <languagesSupported/>
       </capability>

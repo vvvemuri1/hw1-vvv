@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** An n-gram of size 1.
- * Updated by JCasGen Tue Sep 10 22:45:06 EDT 2013
+ * Updated by JCasGen Wed Sep 11 09:54:05 EDT 2013
  * @generated */
 public class Unigram_Type extends NGram_Type {
   /** @generated */

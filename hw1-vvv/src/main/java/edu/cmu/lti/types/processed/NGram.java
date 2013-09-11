@@ -13,8 +13,8 @@ import edu.cmu.lti.types.base.BaseAnnotation;
 import edu.cmu.lti.types.testElement.Answer;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Tue Sep 10 22:45:05 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
+ * Updated by JCasGen Wed Sep 11 09:54:05 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class NGram extends BaseAnnotation {
   /** @generated
@@ -83,22 +83,20 @@ public class NGram extends BaseAnnotation {
     
   /** indexed getter for Elements - gets an indexed value - Tokens in NGram.
    * @generated */
-  public Answer getElements(int i) {
+  public Token getElements(int i) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_Elements == null)
       jcasType.jcas.throwFeatMissing("Elements", "edu.cmu.lti.types.processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i);
-    return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i)));}
+    return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i)));}
 
   /** indexed setter for Elements - sets an indexed value - Tokens in NGram.
    * @generated */
-  public void setElements(int i, Answer v) { 
+  public void setElements(int i, Token v) { 
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_Elements == null)
       jcasType.jcas.throwFeatMissing("Elements", "edu.cmu.lti.types.processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i, jcasType.ll_cas.ll_getFSRef(v));}
-   
-    
-  //*--------------*
+    //*--------------*
   //* Feature: ElementType
 
   /** getter for ElementType - gets Type of the Objects stored in 'elements' array.
@@ -114,4 +112,6 @@ public class NGram extends BaseAnnotation {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_ElementType == null)
       jcasType.jcas.throwFeatMissing("ElementType", "edu.cmu.lti.types.processed.NGram");
     jcasType.ll_cas.ll_setStringValue(addr, ((NGram_Type)jcasType).casFeatCode_ElementType, v);}    
-  }
+   
+    
+}

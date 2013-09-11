@@ -15,7 +15,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Tue Sep 10 22:39:55 EDT 2013
+ * Updated by JCasGen Wed Sep 11 09:54:05 EDT 2013
  * @generated */
 public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */

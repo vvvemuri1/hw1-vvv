@@ -29,7 +29,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.TestElement.Answer</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.testElement.Answer</type>
         </outputs>
         <languagesSupported/>
       </capability>

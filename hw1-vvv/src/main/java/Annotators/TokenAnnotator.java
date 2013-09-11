@@ -29,13 +29,15 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
               
       while (st.hasMoreTokens())
       {
+        String tokenString = st.nextToken();
         Token annotation = new Token(jcas);
-        end = begin + st.nextToken().length();
+        end = begin + tokenString.length();
         annotation.setBegin(begin);
         annotation.setEnd(end);
         annotation.setConfidence(sentence.getConfidence());
         annotation.setCasProcessorId(TokenAnnotator.class.getName());
         annotation.setSentenceId(sentence.getId());
+        annotation.setText(tokenString);
         annotation.addToIndexes();
         begin = end + 1;
       }

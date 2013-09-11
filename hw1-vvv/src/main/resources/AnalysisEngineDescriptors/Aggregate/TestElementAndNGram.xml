@@ -33,7 +33,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">Types.Processed.NGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.types.processed.NGram</type>
         </outputs>
         <languagesSupported/>
       </capability>

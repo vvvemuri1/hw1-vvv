@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import edu.cmu.lti.types.base.BaseAnnotation;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Tue Sep 10 22:56:34 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
+ * Updated by JCasGen Wed Sep 11 09:54:05 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class Token extends BaseAnnotation {
   /** @generated
