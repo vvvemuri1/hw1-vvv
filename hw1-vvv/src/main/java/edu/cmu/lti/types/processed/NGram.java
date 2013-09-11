@@ -8,12 +8,13 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
+
 import edu.cmu.lti.types.base.BaseAnnotation;
 import edu.cmu.lti.types.testElement.Answer;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Tue Sep 10 22:29:13 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Tue Sep 10 22:45:05 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
  * @generated */
 public class NGram extends BaseAnnotation {
   /** @generated
@@ -64,24 +65,6 @@ public class NGram extends BaseAnnotation {
  
     
   //*--------------*
-  //* Feature: ElementType
-
-  /** getter for ElementType - gets Type of the Objects stored in 'elements' array.
-   * @generated */
-  public String getElementType() {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_ElementType == null)
-      jcasType.jcas.throwFeatMissing("ElementType", "edu.cmu.lti.types.processed.NGram");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_ElementType);}
-    
-  /** setter for ElementType - sets Type of the Objects stored in 'elements' array. 
-   * @generated */
-  public void setElementType(String v) {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_ElementType == null)
-      jcasType.jcas.throwFeatMissing("ElementType", "edu.cmu.lti.types.processed.NGram");
-    jcasType.ll_cas.ll_setStringValue(addr, ((NGram_Type)jcasType).casFeatCode_ElementType, v);}    
-   
-    
-  //*--------------*
   //* Feature: Elements
 
   /** getter for Elements - gets Tokens in NGram.
@@ -100,19 +83,35 @@ public class NGram extends BaseAnnotation {
     
   /** indexed getter for Elements - gets an indexed value - Tokens in NGram.
    * @generated */
-  public Token getElements(int i) {
+  public Answer getElements(int i) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_Elements == null)
       jcasType.jcas.throwFeatMissing("Elements", "edu.cmu.lti.types.processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i);
-    return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i)));}
+    return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i)));}
 
   /** indexed setter for Elements - sets an indexed value - Tokens in NGram.
    * @generated */
-  public void setElements(int i, Token v) { 
+  public void setElements(int i, Answer v) { 
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_Elements == null)
       jcasType.jcas.throwFeatMissing("Elements", "edu.cmu.lti.types.processed.NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_Elements), i, jcasType.ll_cas.ll_getFSRef(v));}
-  }
-
+   
     
+  //*--------------*
+  //* Feature: ElementType
+
+  /** getter for ElementType - gets Type of the Objects stored in 'elements' array.
+   * @generated */
+  public String getElementType() {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_ElementType == null)
+      jcasType.jcas.throwFeatMissing("ElementType", "edu.cmu.lti.types.processed.NGram");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_ElementType);}
+    
+  /** setter for ElementType - sets Type of the Objects stored in 'elements' array. 
+   * @generated */
+  public void setElementType(String v) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_ElementType == null)
+      jcasType.jcas.throwFeatMissing("ElementType", "edu.cmu.lti.types.processed.NGram");
+    jcasType.ll_cas.ll_setStringValue(addr, ((NGram_Type)jcasType).casFeatCode_ElementType, v);}    
+  }

@@ -11,10 +11,11 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
+
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Tue Sep 10 22:29:13 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:39:55 EDT 2013
  * @generated */
 public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -102,7 +103,7 @@ public class Evaluation_Type extends BaseAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  * @generated */
   public Evaluation_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
@@ -117,7 +118,3 @@ public class Evaluation_Type extends BaseAnnotation_Type {
 
   }
 }
-
-
-
-    

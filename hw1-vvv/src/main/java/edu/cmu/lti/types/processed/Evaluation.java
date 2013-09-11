@@ -6,14 +6,15 @@ package edu.cmu.lti.types.processed;
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
-
 import org.apache.uima.jcas.cas.FSArray;
+
 import edu.cmu.lti.types.base.BaseAnnotation;
 import edu.cmu.lti.types.testElement.Answer;
 
+
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Tue Sep 10 22:29:13 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Tue Sep 10 22:39:55 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
  * @generated */
 public class Evaluation extends BaseAnnotation {
   /** @generated
@@ -115,4 +116,4 @@ public class Evaluation extends BaseAnnotation {
     jcasType.ll_cas.ll_setFloatValue(addr, ((Evaluation_Type)jcasType).casFeatCode_Precision, v);}    
   }
 
-    
+

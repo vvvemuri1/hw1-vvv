@@ -13,7 +13,7 @@
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.Base.BaseAnnotation</name>
+          <name>edu.cmu.lti.types.base.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
@@ -30,9 +30,9 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.TestElement.Sentence</name>
+          <name>edu.cmu.lti.types.testElement.Sentence</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>Id</name>
@@ -43,14 +43,14 @@
               <name>TokenList</name>
               <description>List of tokens in sentence.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>Types.Processed.Token</elementType>
+              <elementType>edu.cmu.lti.types.processed.Token</elementType>
             </featureDescription>
           </features>
         </typeDescription>
         <typeDescription>
-          <name>Types.TestElement.Answer</name>
+          <name>edu.cmu.lti.types.testElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
-          <supertypeName>Types.TestElement.Sentence</supertypeName>
+          <supertypeName>edu.cmu.lti.types.testElement.Sentence</supertypeName>
           <features>
             <featureDescription>
               <name>IsCorrect</name>
@@ -65,15 +65,15 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.Processed.Evaluation</name>
+          <name>edu.cmu.lti.types.processed.Evaluation</name>
           <description>Evaluation of the answers to the question.</description>
-          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
           <features>
             <featureDescription>
               <name>SortedAnswers</name>
               <description>Answers sorted according to their scores.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>Types.TestElement.Answer</elementType>
+              <elementType>edu.cmu.lti.types.testElement.Answer</elementType>
             </featureDescription>
             <featureDescription>
               <name>Precision</name>
@@ -83,9 +83,9 @@
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.Processed.Token</name>
+          <name>edu.cmu.lti.types.processed.Token</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
           <features>
             <featureDescription>
               <name>SentenceId</name>
