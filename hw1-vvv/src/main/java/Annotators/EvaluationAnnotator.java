@@ -8,8 +8,8 @@ import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
-import Types.Processed.Evaluation;
-import Types.TestElement.Answer;
+import edu.cmu.lti.types.processed.Evaluation;
+import edu.cmu.lti.types.testElement.Answer;
 
 public class EvaluationAnnotator extends JCasAnnotator_ImplBase
 {

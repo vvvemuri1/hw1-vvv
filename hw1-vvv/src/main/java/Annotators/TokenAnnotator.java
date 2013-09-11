@@ -8,8 +8,8 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import Types.Processed.Token;
-import Types.TestElement.Sentence;
+import edu.cmu.lti.types.processed.Token;
+import edu.cmu.lti.types.testElement.Sentence;
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase 
 {

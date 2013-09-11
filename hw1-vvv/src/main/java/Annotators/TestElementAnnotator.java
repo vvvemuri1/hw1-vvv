@@ -9,11 +9,10 @@ import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
-import org.apache.uima.jcas.cas.StringArray;
 
-import Types.Processed.Token;
-import Types.TestElement.Answer;
-import Types.TestElement.Question;
+import edu.cmu.lti.types.processed.Token;
+import edu.cmu.lti.types.testElement.Answer;
+import edu.cmu.lti.types.testElement.Question;
 
 public class TestElementAnnotator extends JCasAnnotator_ImplBase 
 {

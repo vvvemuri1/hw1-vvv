@@ -7,7 +7,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import Types.TestElement.Answer;
+import edu.cmu.lti.types.testElement.Answer;
 
 public class AnswerScoringAnnotator extends JCasAnnotator_ImplBase 
 {

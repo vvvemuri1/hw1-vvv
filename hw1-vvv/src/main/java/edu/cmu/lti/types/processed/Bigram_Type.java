@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Tue Sep 10 20:24:22 EDT 2013 */
-package Types.Processed;
+/* First created by JCasGen Tue Sep 10 21:24:19 EDT 2013 */
+package edu.cmu.lti.types.processed;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** An n-gram of size 2.
- * Updated by JCasGen Tue Sep 10 21:03:17 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
  * @generated */
 public class Bigram_Type extends NGram_Type {
   /** @generated */
@@ -39,7 +39,7 @@ public class Bigram_Type extends NGram_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.Bigram");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.processed.Bigram");
 
 
 

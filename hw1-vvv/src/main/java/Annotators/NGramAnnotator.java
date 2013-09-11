@@ -8,8 +8,8 @@ import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
-import Types.Processed.NGram;
-import Types.Processed.Token;
+import edu.cmu.lti.types.processed.NGram;
+import edu.cmu.lti.types.processed.Token;
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase 
 {  

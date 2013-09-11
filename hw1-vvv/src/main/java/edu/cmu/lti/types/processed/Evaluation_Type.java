@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Mon Sep 09 10:22:11 EDT 2013 */
-package Types.Processed;
+/* First created by JCasGen Tue Sep 10 21:24:19 EDT 2013 */
+package edu.cmu.lti.types.processed;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,10 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import Types.Base.BaseAnnotation_Type;
+import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Tue Sep 10 21:03:03 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
  * @generated */
 public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -42,7 +42,7 @@ public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.Evaluation");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.types.processed.Evaluation");
  
   /** @generated */
   final Feature casFeat_SortedAnswers;
@@ -51,19 +51,19 @@ public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public int getSortedAnswers(int addr) {
         if (featOkTst && casFeat_SortedAnswers == null)
-      jcas.throwFeatMissing("SortedAnswers", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("SortedAnswers", "edu.cmu.lti.types.processed.Evaluation");
     return ll_cas.ll_getRefValue(addr, casFeatCode_SortedAnswers);
   }
   /** @generated */    
   public void setSortedAnswers(int addr, int v) {
         if (featOkTst && casFeat_SortedAnswers == null)
-      jcas.throwFeatMissing("SortedAnswers", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("SortedAnswers", "edu.cmu.lti.types.processed.Evaluation");
     ll_cas.ll_setRefValue(addr, casFeatCode_SortedAnswers, v);}
     
    /** @generated */
   public int getSortedAnswers(int addr, int i) {
         if (featOkTst && casFeat_SortedAnswers == null)
-      jcas.throwFeatMissing("SortedAnswers", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("SortedAnswers", "edu.cmu.lti.types.processed.Evaluation");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_SortedAnswers), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_SortedAnswers), i);
@@ -73,7 +73,7 @@ public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public void setSortedAnswers(int addr, int i, int v) {
         if (featOkTst && casFeat_SortedAnswers == null)
-      jcas.throwFeatMissing("SortedAnswers", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("SortedAnswers", "edu.cmu.lti.types.processed.Evaluation");
     if (lowLevelTypeChecks)
       ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_SortedAnswers), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_SortedAnswers), i);
@@ -88,13 +88,13 @@ public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */ 
   public float getPrecision(int addr) {
         if (featOkTst && casFeat_Precision == null)
-      jcas.throwFeatMissing("Precision", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("Precision", "edu.cmu.lti.types.processed.Evaluation");
     return ll_cas.ll_getFloatValue(addr, casFeatCode_Precision);
   }
   /** @generated */    
   public void setPrecision(int addr, float v) {
         if (featOkTst && casFeat_Precision == null)
-      jcas.throwFeatMissing("Precision", "Types.Processed.Evaluation");
+      jcas.throwFeatMissing("Precision", "edu.cmu.lti.types.processed.Evaluation");
     ll_cas.ll_setFloatValue(addr, casFeatCode_Precision, v);}
     
   
