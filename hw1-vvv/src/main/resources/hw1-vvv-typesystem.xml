@@ -31,19 +31,29 @@
     <typeDescription>
       <name>Types.Processed.Token</name>
       <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-      <supertypeName>Types.BaseAnnotation</supertypeName>
+      <supertypeName>Types.Base.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
           <name>SentenceId</name>
           <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
         </featureDescription>
+      <featureDescription>
+          <name>PartOfSpeech</name>
+          <description>Linguistic category of token.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>Text</name>
+          <description>Text contained in token.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
       <name>Types.Processed.NGram</name>
       <description>Type representing unigram, bigram or trigram in question/answer.</description>
-      <supertypeName>Types.BaseAnnotation</supertypeName>
+      <supertypeName>Types.Base.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
           <name>ElementType</name>
@@ -61,17 +71,23 @@
     <typeDescription>
       <name>Types.TestElement.Sentence</name>
       <description>SuperType of Question and Answer.</description>
-      <supertypeName>Types.BaseAnnotation</supertypeName>
+      <supertypeName>Types.Base.BaseAnnotation</supertypeName>
     <features>
         <featureDescription>
-          <name>SentenceId</name>
+          <name>Id</name>
           <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>TokenList</name>
+          <description>List of tokens in sentence.</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>Types.Processed.Token</elementType>
         </featureDescription>
       </features>
     </typeDescription>
   <typeDescription>
-      <name>Types.BaseAnnotation</name>
+      <name>Types.Base.BaseAnnotation</name>
       <description>Common core attributes shared by all types.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -90,7 +106,7 @@
   <typeDescription>
       <name>Types.Processed.Evaluation</name>
       <description>Evaluation of the answers to the question.</description>
-      <supertypeName>Types.BaseAnnotation</supertypeName>
+      <supertypeName>Types.Base.BaseAnnotation</supertypeName>
       <features>
         <featureDescription>
           <name>SortedAnswers</name>
@@ -104,6 +120,21 @@
           <rangeTypeName>uima.cas.Float</rangeTypeName>
         </featureDescription>
       </features>
+    </typeDescription>
+  <typeDescription>
+      <name>Types.Processed.Unigram</name>
+      <description>An n-gram of size 1.</description>
+      <supertypeName>Types.Processed.NGram</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>Types.Processed.Bigram</name>
+      <description>An n-gram of size 2.</description>
+      <supertypeName>Types.Processed.NGram</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>Types.Processed.Trigram</name>
+      <description>An n-gram of size 3.</description>
+      <supertypeName>Types.Processed.NGram</supertypeName>
     </typeDescription>
   </types>
 </typeSystemDescription>

@@ -8,11 +8,11 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
-import Types.BaseAnnotation;
+import Types.Base.BaseAnnotation;
 import Types.TestElement.Answer;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Mon Sep 09 13:17:26 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:03:03 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/EvaluationAnnotator.xml
  * @generated */
 public class Evaluation extends BaseAnnotation {

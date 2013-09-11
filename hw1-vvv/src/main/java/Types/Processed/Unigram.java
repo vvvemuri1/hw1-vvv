@@ -1,23 +1,24 @@
 
 
-/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
-package Types.TestElement;
+/* First created by JCasGen Tue Sep 10 20:24:22 EDT 2013 */
+package Types.Processed;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 
-/** Question being asked in sample information processing task.
- * Updated by JCasGen Tue Sep 10 21:03:38 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TestElementAnnotator.xml
+
+/** An n-gram of size 1.
+ * Updated by JCasGen Tue Sep 10 21:03:17 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/NGramAnnotator.xml
  * @generated */
-public class Question extends Sentence {
+public class Unigram extends NGram {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Question.class);
+  public final static int typeIndexID = JCasRegistry.register(Unigram.class);
   /** @generated
    * @ordered 
    */
@@ -29,23 +30,23 @@ public class Question extends Sentence {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Question() {/* intentionally empty block */}
+  protected Unigram() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Question(int addr, TOP_Type type) {
+  public Unigram(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Question(JCas jcas) {
+  public Unigram(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Question(JCas jcas, int begin, int end) {
+  public Unigram(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

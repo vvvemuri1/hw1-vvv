@@ -11,10 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import Types.BaseAnnotation_Type;
+import Types.Base.BaseAnnotation_Type;
 
 /** Evaluation of the answers to the question.
- * Updated by JCasGen Mon Sep 09 13:17:26 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:03:03 EDT 2013
  * @generated */
 public class Evaluation_Type extends BaseAnnotation_Type {
   /** @generated */

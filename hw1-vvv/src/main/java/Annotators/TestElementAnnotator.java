@@ -8,7 +8,10 @@ import java.util.regex.Pattern;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.StringArray;
 
+import Types.Processed.Token;
 import Types.TestElement.Answer;
 import Types.TestElement.Question;
 
@@ -35,7 +38,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       annotation.setEnd(matcher.end());
       annotation.setCasProcessorId(TestElementAnnotator.class.getName());
       annotation.setConfidence(1.0f);
-      annotation.setSentenceId(sentenceId++);
+      annotation.setId(sentenceId++);
       annotation.addToIndexes();
       position = matcher.end();
     }
@@ -48,15 +51,20 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       Answer annotation = new Answer(jcas);
       annotation.setBegin(matcher.start());
       annotation.setEnd(matcher.end());
-      annotation.setSentenceId(sentenceId++);
+      annotation.setId(sentenceId++);
       annotation.setCasProcessorId(TestElementAnnotator.class.getName());
 
       String answer = annotation.getCoveredText();
       StringTokenizer st = new StringTokenizer(answer);
             
+      int begin = annotation.getBegin();
+      int end = begin;
+      
       if (st.hasMoreTokens())
       {
-        st.nextToken();
+        String tokenString = st.nextToken();
+        end = begin + tokenString.length();
+        begin = end + 1;
       }
       else
       {
@@ -66,6 +74,8 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
       if (st.hasMoreTokens())
       {
           String isCorrect = st.nextToken();
+          end = begin + isCorrect.length();
+
           if (Integer.parseInt(isCorrect) == 0)
           {
             annotation.setConfidence(0f);
@@ -80,12 +90,34 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase
           {
             throw new IllegalArgumentException("Invalid answer: " + answer);
           }
+          
+          begin = end + 1;
       }
       else
       {
         throw new NoSuchElementException("Invalid answer: " + answer);
       }
-            
+      
+      FSArray tokens = new FSArray(jcas, st.countTokens());
+
+      int i = 0;
+      
+      while(st.hasMoreTokens())
+      {
+        String tokenString = st.nextToken();
+        end = begin + tokenString.length();
+        
+        Token token = new Token(jcas);
+        token.setBegin(begin);
+        token.setEnd(end);
+        token.setText(tokenString);
+        token.setSentenceId(sentenceId);
+        tokens.set(i++, token);
+        
+        begin = end + 1;
+      }
+      
+      annotation.setTokenList(tokens);            
       annotation.setBegin(matcher.start() + 4);
       annotation.addToIndexes();
       position = matcher.end();

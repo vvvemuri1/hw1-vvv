@@ -37,17 +37,23 @@
       <typeDescription>
           <name>Types.TestElement.Sentence</name>
           <description>Super Type of Question and Answer.</description>
-          <supertypeName>Types.BaseAnnotation</supertypeName>
+          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
-              <name>SentenceId</name>
+              <name>Id</name>
               <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
               <rangeTypeName>uima.cas.Integer</rangeTypeName>
+            </featureDescription>
+          <featureDescription>
+              <name>TokenList</name>
+              <description>List of tokens in sentence.</description>
+              <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+              <elementType>Types.Processed.Token</elementType>
             </featureDescription>
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.BaseAnnotation</name>
+          <name>Types.Base.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
         <features>
@@ -60,6 +66,28 @@
               <name>Confidence</name>
               <description>Confidence of the creator in the correctness of the output on a scale of 0 to 1.0.</description>
               <rangeTypeName>uima.cas.Float</rangeTypeName>
+            </featureDescription>
+          </features>
+        </typeDescription>
+      <typeDescription>
+          <name>Types.Processed.Token</name>
+          <description>Token in question/answer (delimited by whitespace and punctuation).</description>
+          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <features>
+            <featureDescription>
+              <name>SentenceId</name>
+              <description>Unique number assigned to each sentence to allow token to determine which sentence it is part of.</description>
+              <rangeTypeName>uima.cas.Integer</rangeTypeName>
+            </featureDescription>
+            <featureDescription>
+              <name>PartOfSpeech</name>
+              <description>Linguistic category of token.</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+            </featureDescription>
+            <featureDescription>
+              <name>Text</name>
+              <description>Text contained in token.</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
             </featureDescription>
           </features>
         </typeDescription>

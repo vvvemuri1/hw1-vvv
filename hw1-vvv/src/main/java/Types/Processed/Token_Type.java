@@ -11,10 +11,10 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import Types.BaseAnnotation_Type;
+import Types.Base.BaseAnnotation_Type;
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:04:01 EDT 2013
  * @generated */
 public class Token_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -61,6 +61,42 @@ public class Token_Type extends BaseAnnotation_Type {
     ll_cas.ll_setIntValue(addr, casFeatCode_SentenceId, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_PartOfSpeech;
+  /** @generated */
+  final int     casFeatCode_PartOfSpeech;
+  /** @generated */ 
+  public String getPartOfSpeech(int addr) {
+        if (featOkTst && casFeat_PartOfSpeech == null)
+      jcas.throwFeatMissing("PartOfSpeech", "Types.Processed.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_PartOfSpeech);
+  }
+  /** @generated */    
+  public void setPartOfSpeech(int addr, String v) {
+        if (featOkTst && casFeat_PartOfSpeech == null)
+      jcas.throwFeatMissing("PartOfSpeech", "Types.Processed.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_PartOfSpeech, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_Text;
+  /** @generated */
+  final int     casFeatCode_Text;
+  /** @generated */ 
+  public String getText(int addr) {
+        if (featOkTst && casFeat_Text == null)
+      jcas.throwFeatMissing("Text", "Types.Processed.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_Text);
+  }
+  /** @generated */    
+  public void setText(int addr, String v) {
+        if (featOkTst && casFeat_Text == null)
+      jcas.throwFeatMissing("Text", "Types.Processed.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_Text, v);}
+    
+  
 
 
 
@@ -73,6 +109,14 @@ public class Token_Type extends BaseAnnotation_Type {
  
     casFeat_SentenceId = jcas.getRequiredFeatureDE(casType, "SentenceId", "uima.cas.Integer", featOkTst);
     casFeatCode_SentenceId  = (null == casFeat_SentenceId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_SentenceId).getCode();
+
+ 
+    casFeat_PartOfSpeech = jcas.getRequiredFeatureDE(casType, "PartOfSpeech", "uima.cas.String", featOkTst);
+    casFeatCode_PartOfSpeech  = (null == casFeat_PartOfSpeech) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_PartOfSpeech).getCode();
+
+ 
+    casFeat_Text = jcas.getRequiredFeatureDE(casType, "Text", "uima.cas.String", featOkTst);
+    casFeatCode_Text  = (null == casFeat_Text) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Text).getCode();
 
   }
 }

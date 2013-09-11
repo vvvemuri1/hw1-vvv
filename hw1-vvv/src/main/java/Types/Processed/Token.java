@@ -7,11 +7,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import Types.BaseAnnotation;
+import Types.Base.BaseAnnotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:04:01 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Token extends BaseAnnotation {
@@ -78,6 +78,42 @@ public class Token extends BaseAnnotation {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_SentenceId == null)
       jcasType.jcas.throwFeatMissing("SentenceId", "Types.Processed.Token");
     jcasType.ll_cas.ll_setIntValue(addr, ((Token_Type)jcasType).casFeatCode_SentenceId, v);}    
+   
+    
+  //*--------------*
+  //* Feature: PartOfSpeech
+
+  /** getter for PartOfSpeech - gets Linguistic category of token.
+   * @generated */
+  public String getPartOfSpeech() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_PartOfSpeech == null)
+      jcasType.jcas.throwFeatMissing("PartOfSpeech", "Types.Processed.Token");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_PartOfSpeech);}
+    
+  /** setter for PartOfSpeech - sets Linguistic category of token. 
+   * @generated */
+  public void setPartOfSpeech(String v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_PartOfSpeech == null)
+      jcasType.jcas.throwFeatMissing("PartOfSpeech", "Types.Processed.Token");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_PartOfSpeech, v);}    
+   
+    
+  //*--------------*
+  //* Feature: Text
+
+  /** getter for Text - gets Text contained in token.
+   * @generated */
+  public String getText() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_Text == null)
+      jcasType.jcas.throwFeatMissing("Text", "Types.Processed.Token");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_Text);}
+    
+  /** setter for Text - sets Text contained in token. 
+   * @generated */
+  public void setText(String v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_Text == null)
+      jcasType.jcas.throwFeatMissing("Text", "Types.Processed.Token");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_Text, v);}    
   }
 
     

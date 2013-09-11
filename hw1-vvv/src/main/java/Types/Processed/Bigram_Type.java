@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Sun Sep 08 15:51:41 EDT 2013 */
-package Types.TestElement;
+/* First created by JCasGen Tue Sep 10 20:24:22 EDT 2013 */
+package Types.Processed;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,10 +10,10 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
-/** Question being asked in sample information processing task.
- * Updated by JCasGen Tue Sep 10 21:03:38 EDT 2013
+/** An n-gram of size 2.
+ * Updated by JCasGen Tue Sep 10 21:03:17 EDT 2013
  * @generated */
-public class Question_Type extends Sentence_Type {
+public class Bigram_Type extends NGram_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -21,31 +21,31 @@ public class Question_Type extends Sentence_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Question_Type.this.useExistingInstance) {
+  			 if (Bigram_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Question_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Bigram_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Question(addr, Question_Type.this);
-  			   Question_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Bigram(addr, Bigram_Type.this);
+  			   Bigram_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Question(addr, Question_Type.this);
+        } else return new Bigram(addr, Bigram_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Question.typeIndexID;
+  public final static int typeIndexID = Bigram.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.TestElement.Question");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Types.Processed.Bigram");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Question_Type(JCas jcas, Type casType) {
+  public Bigram_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

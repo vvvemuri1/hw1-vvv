@@ -35,7 +35,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase
         annotation.setEnd(end);
         annotation.setConfidence(sentence.getConfidence());
         annotation.setCasProcessorId(TokenAnnotator.class.getName());
-        annotation.setSentenceId(sentence.getSentenceId());
+        annotation.setSentenceId(sentence.getId());
         annotation.addToIndexes();
         begin = end + 1;
       }

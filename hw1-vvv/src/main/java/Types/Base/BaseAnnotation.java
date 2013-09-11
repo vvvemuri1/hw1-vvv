@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Mon Sep 09 12:22:36 EDT 2013 */
-package Types;
+/* First created by JCasGen Tue Sep 10 20:26:18 EDT 2013 */
+package Types.Base;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Common core attributes shared by all types.
- * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:04:01 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class BaseAnnotation extends Annotation {
@@ -69,14 +69,14 @@ public class BaseAnnotation extends Annotation {
    * @generated */
   public String getCasProcessorId() {
     if (BaseAnnotation_Type.featOkTst && ((BaseAnnotation_Type)jcasType).casFeat_CasProcessorId == null)
-      jcasType.jcas.throwFeatMissing("CasProcessorId", "Types.BaseAnnotation");
+      jcasType.jcas.throwFeatMissing("CasProcessorId", "Types.Base.BaseAnnotation");
     return jcasType.ll_cas.ll_getStringValue(addr, ((BaseAnnotation_Type)jcasType).casFeatCode_CasProcessorId);}
     
   /** setter for CasProcessorId - sets componentId of creator. 
    * @generated */
   public void setCasProcessorId(String v) {
     if (BaseAnnotation_Type.featOkTst && ((BaseAnnotation_Type)jcasType).casFeat_CasProcessorId == null)
-      jcasType.jcas.throwFeatMissing("CasProcessorId", "Types.BaseAnnotation");
+      jcasType.jcas.throwFeatMissing("CasProcessorId", "Types.Base.BaseAnnotation");
     jcasType.ll_cas.ll_setStringValue(addr, ((BaseAnnotation_Type)jcasType).casFeatCode_CasProcessorId, v);}    
    
     
@@ -87,14 +87,14 @@ public class BaseAnnotation extends Annotation {
    * @generated */
   public float getConfidence() {
     if (BaseAnnotation_Type.featOkTst && ((BaseAnnotation_Type)jcasType).casFeat_Confidence == null)
-      jcasType.jcas.throwFeatMissing("Confidence", "Types.BaseAnnotation");
+      jcasType.jcas.throwFeatMissing("Confidence", "Types.Base.BaseAnnotation");
     return jcasType.ll_cas.ll_getFloatValue(addr, ((BaseAnnotation_Type)jcasType).casFeatCode_Confidence);}
     
   /** setter for Confidence - sets Confidence of the creator in the correctness of the output on a scale of 0 to 1.0. 
    * @generated */
   public void setConfidence(float v) {
     if (BaseAnnotation_Type.featOkTst && ((BaseAnnotation_Type)jcasType).casFeat_Confidence == null)
-      jcasType.jcas.throwFeatMissing("Confidence", "Types.BaseAnnotation");
+      jcasType.jcas.throwFeatMissing("Confidence", "Types.Base.BaseAnnotation");
     jcasType.ll_cas.ll_setFloatValue(addr, ((BaseAnnotation_Type)jcasType).casFeatCode_Confidence, v);}    
   }
 

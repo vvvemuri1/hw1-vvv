@@ -14,7 +14,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Mon Sep 09 13:17:51 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:03:38 EDT 2013
  * @generated */
 public class Answer_Type extends Sentence_Type {
   /** @generated */

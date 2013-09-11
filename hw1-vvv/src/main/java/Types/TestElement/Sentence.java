@@ -7,11 +7,18 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import Types.BaseAnnotation;
+import org.apache.uima.jcas.cas.FSArray;
+import Types.Base.BaseAnnotation;
+
+
+import org.apache.uima.jcas.cas.StringArray;
+
+
+import Types.Processed.Token;
 
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Mon Sep 09 13:18:06 EDT 2013
+ * Updated by JCasGen Tue Sep 10 21:04:01 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/TokenAnnotator.xml
  * @generated */
 public class Sentence extends BaseAnnotation {
@@ -61,21 +68,55 @@ public class Sentence extends BaseAnnotation {
   private void readObject() {/*default - does nothing empty block */}
      
   //*--------------*
-  //* Feature: SentenceId
+  //* Feature: Id
 
-  /** getter for SentenceId - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
+  /** getter for Id - gets Unique number assigned to each sentence to allow token to determine which sentence it is part of.
    * @generated */
-  public int getSentenceId() {
-    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_SentenceId == null)
-      jcasType.jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_SentenceId);}
+  public int getId() {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_Id == null)
+      jcasType.jcas.throwFeatMissing("Id", "Types.TestElement.Sentence");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_Id);}
     
-  /** setter for SentenceId - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
+  /** setter for Id - sets Unique number assigned to each sentence to allow token to determine which sentence it is part of. 
    * @generated */
-  public void setSentenceId(int v) {
-    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_SentenceId == null)
-      jcasType.jcas.throwFeatMissing("SentenceId", "Types.TestElement.Sentence");
-    jcasType.ll_cas.ll_setIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_SentenceId, v);}    
+  public void setId(int v) {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_Id == null)
+      jcasType.jcas.throwFeatMissing("Id", "Types.TestElement.Sentence");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Sentence_Type)jcasType).casFeatCode_Id, v);}    
+   
+    
+  //*--------------*
+  //* Feature: TokenList
+
+  /** getter for TokenList - gets List of tokens in sentence.
+   * @generated */
+  public FSArray getTokenList() {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_TokenList == null)
+      jcasType.jcas.throwFeatMissing("TokenList", "Types.TestElement.Sentence");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList)));}
+    
+  /** setter for TokenList - sets List of tokens in sentence. 
+   * @generated */
+  public void setTokenList(FSArray v) {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_TokenList == null)
+      jcasType.jcas.throwFeatMissing("TokenList", "Types.TestElement.Sentence");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for TokenList - gets an indexed value - 
+   * @generated */
+  public Token getTokenList(int i) {
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_TokenList == null)
+      jcasType.jcas.throwFeatMissing("TokenList", "Types.TestElement.Sentence");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i);
+    return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i)));}
+
+  /** indexed setter for TokenList - sets an indexed value - List of tokens in sentence.
+   * @generated */
+  public void setTokenList(int i, Token v) { 
+    if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_TokenList == null)
+      jcasType.jcas.throwFeatMissing("TokenList", "Types.TestElement.Sentence");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i, jcasType.ll_cas.ll_getFSRef(v));}
   }
 
     
