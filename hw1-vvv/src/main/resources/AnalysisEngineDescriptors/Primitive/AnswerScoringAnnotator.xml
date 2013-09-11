@@ -14,7 +14,7 @@ an answer score annotation to each answer. The answer score annotation will reco
     <typeSystemDescription>
       <types>
         <typeDescription>
-          <name>Types.Base.BaseAnnotation</name>
+          <name>edu.cmu.lti.types.base.BaseAnnotation</name>
           <description>Common core attributes shared by all types.</description>
           <supertypeName>uima.tcas.Annotation</supertypeName>
           <features>
@@ -31,9 +31,9 @@ an answer score annotation to each answer. The answer score annotation will reco
           </features>
         </typeDescription>
         <typeDescription>
-          <name>Types.TestElement.Sentence</name>
+          <name>edu.cmu.lti.types.testElement.Sentence</name>
           <description>SuperType of Question and Answer.</description>
-          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>Id</name>
@@ -44,19 +44,19 @@ an answer score annotation to each answer. The answer score annotation will reco
               <name>TokenList</name>
               <description>List of tokens in sentence.</description>
               <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-              <elementType>Types.Processed.Token</elementType>
+              <elementType>edu.cmu.lti.types.processed.Token</elementType>
             </featureDescription>
           </features>
         </typeDescription>
         <typeDescription>
-          <name>Types.TestElement.Question</name>
+          <name>edu.cmu.lti.types.testElement.Question</name>
           <description>Question being asked in sample information processing task.</description>
-          <supertypeName>Types.TestElement.Sentence</supertypeName>
+          <supertypeName>edu.cmu.lti.types.testElement.Sentence</supertypeName>
         </typeDescription>
         <typeDescription>
-          <name>Types.TestElement.Answer</name>
+          <name>edu.cmu.lti.types.testElement.Answer</name>
           <description>Proposed answer to question being asked in sample information processing task.</description>
-          <supertypeName>Types.TestElement.Sentence</supertypeName>
+          <supertypeName>edu.cmu.lti.types.testElement.Sentence</supertypeName>
           <features>
             <featureDescription>
               <name>IsCorrect</name>
@@ -71,9 +71,9 @@ an answer score annotation to each answer. The answer score annotation will reco
           </features>
         </typeDescription>
       <typeDescription>
-          <name>Types.Processed.Token</name>
+          <name>edu.cmu.lti.types.processed.Token</name>
           <description>Token in question/answer (delimited by whitespace and punctuation).</description>
-          <supertypeName>Types.Base.BaseAnnotation</supertypeName>
+          <supertypeName>edu.cmu.lti.types.base.BaseAnnotation</supertypeName>
         <features>
             <featureDescription>
               <name>SentenceId</name>

@@ -9,7 +9,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** An n-gram of size 2.
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:29:13 EDT 2013
  * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
  * @generated */
 public class Bigram extends NGram {

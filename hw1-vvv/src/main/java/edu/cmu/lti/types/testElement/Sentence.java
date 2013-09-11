@@ -11,9 +11,10 @@ import org.apache.uima.jcas.cas.FSArray;
 import edu.cmu.lti.types.base.BaseAnnotation;
 import edu.cmu.lti.types.processed.Token;
 
+
 /** SuperType of Question and Answer.
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Tue Sep 10 22:35:47 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/AnswerScoringAnnotator.xml
  * @generated */
 public class Sentence extends BaseAnnotation {
   /** @generated
@@ -114,5 +115,3 @@ public class Sentence extends BaseAnnotation {
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_TokenList), i, jcasType.ll_cas.ll_getFSRef(v));}
   }
-
-    

@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Proposed answer to question being asked in sample information processing task.
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:35:47 EDT 2013
  * @generated */
 public class Answer_Type extends Sentence_Type {
   /** @generated */
@@ -82,7 +82,7 @@ public class Answer_Type extends Sentence_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  * @generated */
   public Answer_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

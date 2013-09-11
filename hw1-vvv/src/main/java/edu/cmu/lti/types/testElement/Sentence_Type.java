@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** SuperType of Question and Answer.
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:35:47 EDT 2013
  * @generated */
 public class Sentence_Type extends BaseAnnotation_Type {
   /** @generated */
@@ -102,7 +102,7 @@ public class Sentence_Type extends BaseAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  * @generated */
   public Sentence_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

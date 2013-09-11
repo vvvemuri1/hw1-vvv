@@ -64,7 +64,7 @@
           <name>Elements</name>
           <description>Tokens in NGram.</description>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-          <elementType>edu.cmu.lti.types.testElement.Answer</elementType>
+          <elementType>edu.cmu.lti.types.processed.Token</elementType>
         </featureDescription>
       </features>
     </typeDescription>

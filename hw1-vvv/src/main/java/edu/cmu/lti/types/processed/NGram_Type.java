@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.lti.types.base.BaseAnnotation_Type;
 
 /** Type representing unigram, bigram or trigram in question/answer.
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
+ * Updated by JCasGen Tue Sep 10 22:29:13 EDT 2013
  * @generated */
 public class NGram_Type extends BaseAnnotation_Type {
   /** @generated */

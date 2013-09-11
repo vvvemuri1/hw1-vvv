@@ -11,8 +11,8 @@ import edu.cmu.lti.types.base.BaseAnnotation;
 
 
 /** Token in question/answer (delimited by whitespace and punctuation).
- * Updated by JCasGen Tue Sep 10 21:29:12 EDT 2013
- * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/hw1-vvv-typesystem.xml
+ * Updated by JCasGen Tue Sep 10 22:35:47 EDT 2013
+ * XML source: /Users/vvvemuri1/Masters/11791/hw1/hw1-vvv/hw1-vvv/src/main/resources/AnalysisEngineDescriptors/Primitive/AnswerScoringAnnotator.xml
  * @generated */
 public class Token extends BaseAnnotation {
   /** @generated
